@@ -1216,6 +1216,9 @@ html {
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
+  --dropdown-text-color: #1A162E;
 }
 @media (max-width: 767.98px) {
   html {
@@ -1228,10 +1231,15 @@ html.dark {
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(50%)
       saturate(0%) hue-rotate(44deg) brightness(103%) contrast(100%);
   --header-bg-color: #171c28;
-  --body-bg: #292E39;
+  --body-bg: #292e39;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
+  --dropdown-bg-color: #2f3441;
+  --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+  --dropdown-text-color: #b9babe;
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(18%) sepia(8%)
+      saturate(1524%) hue-rotate(186deg) brightness(93%) contrast(89%);
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
@@ -1244,6 +1252,7 @@ html.dark {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media (max-width: 991.98px) {
@@ -1283,10 +1292,19 @@ html.dark {
     display: none;
   }
 }
-.navbar__list {
-  column-gap: 30px;
+.navbar__item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar__item:first-child .navbar__item__link {
+  padding-left: 0;
+}
+.navbar__item:last-child .navbar__item__link {
+  padding-right: 0;
 }
 .navbar__link {
+  height: 50px;
+  padding: 0 15px;
   column-gap: 6px;
   font-size: 1.5rem;
   font-weight: 500;
@@ -1381,6 +1399,32 @@ html.dark {
   .logo__img {
     width: 24px;
   }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease-in-out;
+}
+.dropdown__inner {
+  position: relative;
+  width: 1240px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  color: var(--dropdown-text-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+}
+.dropdown__inner::before {
+  position: absolute;
+  content: url("../icons/dropdown-arrow.svg");
+  top: -12px;
+  left: var(--arrow-left-pos);
+  translate: -50% 0;
+  filter: var(--dropdown-arrow-color);
 }
 
 /*# sourceMappingURL=main.css.map */

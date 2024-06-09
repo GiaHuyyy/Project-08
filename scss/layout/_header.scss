@@ -11,6 +11,7 @@
 
 .top-bar {
     @extend %flexItemsCenter;
+    position: relative;
     padding: 30px 0;
 
     @include abstracts.breakpoints(lg) {
@@ -47,11 +48,27 @@
 
     &__list {
         @extend %flexItemsCenter;
-        column-gap: 30px;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:first-child &__link {
+            padding-left: 0;
+        }
+
+        &:last-child &__link {
+            padding-right: 0;
+        }
     }
 
     &__link {
         @extend %flexItemsCenter;
+        height: 50px;
+        padding: 0 15px;
         column-gap: 6px;
         font-size: 1.5rem;
         font-weight: 500;
