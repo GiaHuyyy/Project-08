@@ -1,15 +1,19 @@
 .dropdown {
     position: absolute;
     left: 0;
+    width: min(1240px, 100%);
     padding-top: 54px;
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
     transition: 0.2s ease-in-out;
 
     &__inner {
+        --inner-max-height: min(582px, 100vh - 158px);
+        --inner-padding: 30px;
+
         position: relative;
-        width: 1240px;
-        padding: 30px;
+        max-height: var(--inner-max-height);
+        padding: var(--inner-padding);
         border-radius: 20px;
         background: var(--dropdown-bg-color);
         color: var(--dropdown-text-color);
@@ -22,6 +26,73 @@
             left: var(--arrow-left-pos);
             translate: -50% 0;
             filter: var(--dropdown-arrow-color);
+        }
+    }
+}
+
+.top-menu {
+    max-height: calc(var(--inner-max-height) - (var(--inner-padding) * 2));
+
+    &__main {
+        width: 292px;
+        max-height: inherit;
+        border-right: 1px solid var(--top-menu-border-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    column-gap: 14px;
+
+    &__icon {
+        position: relative;
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+
+        &-1 {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        &-2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 21px;
+            height: 21px;
+            object-fit: cover;
+            filter: var(--menu-column-icon-color);
+        }
+    }
+
+    &__content {
+        flex: 1;
+        margin-top: 5px;
+    }
+
+    &__heading {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+    &__link {
+        display: block;
+        padding: 7px 0;
+        font-size: 1.4rem;
+        line-height: 142.857%;
+
+        &:hover {
+            color: #0071dc;
+            font-weight: 500;
+            // text-shadow: -0.4px -0.4px #0071dc, 0.3px 0.3px #0071dc;
         }
     }
 }
