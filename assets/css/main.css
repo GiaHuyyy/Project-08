@@ -1234,6 +1234,11 @@ html.dark {
 .header {
   background: var(--header-bg-color);
 }
+@media (max-width: 575.98px) {
+  .header {
+    width: 100px;
+  }
+}
 
 .top-bar {
   padding: 30px 0;
