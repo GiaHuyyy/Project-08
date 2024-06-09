@@ -1,10 +1,12 @@
+@use "../abstracts";
+
 .dropdown {
     position: absolute;
     left: 0;
     width: min(1240px, 100%);
     padding-top: 54px;
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     transition: 0.2s ease-in-out;
 
     &__inner {
@@ -54,10 +56,14 @@
         width: 36px;
         height: 36px;
 
+        @include abstracts.breakpoints(xl) {
+            display: none;
+        }
+
         &-1 {
             width: 30px;
             height: 30px;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         &-2 {
@@ -66,7 +72,7 @@
             bottom: 0;
             width: 21px;
             height: 21px;
-            object-fit: cover;
+            object-fit: contain;
             filter: var(--menu-column-icon-color);
         }
     }
@@ -109,8 +115,8 @@
 
 .sub-menu {
     display: grid;
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
     position: absolute;
