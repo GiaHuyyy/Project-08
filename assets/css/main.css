@@ -147,6 +147,7 @@ body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
   color: var(--text-color);
+  background: var(--body-bg);
 }
 
 a {
@@ -1211,9 +1212,15 @@ html {
   --icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%)
       saturate(1419%) hue-rotate(210deg) brightness(98%) contrast(98%);
   --header-bg-color: #eee;
+  --body-bg: #f6f6f6;
   --top-act-group-bg-color: #fff;
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-group-separate: #ededf6;
+}
+@media (max-width: 767.98px) {
+  html {
+    --header-bg-color: #fff;
+  }
 }
 
 html.dark {
@@ -1221,6 +1228,7 @@ html.dark {
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(50%)
       saturate(0%) hue-rotate(44deg) brightness(103%) contrast(100%);
   --header-bg-color: #171c28;
+  --body-bg: #292E39;
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
@@ -1352,6 +1360,11 @@ html.dark {
   .logo {
     column-gap: 10px;
     margin-left: 39px;
+  }
+}
+@media (max-width: 767.98px) {
+  .logo {
+    margin-left: 0;
   }
 }
 .logo__title {
