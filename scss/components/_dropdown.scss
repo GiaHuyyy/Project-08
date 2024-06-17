@@ -9,6 +9,13 @@
     visibility: hidden;
     transition: 0.3s ease-in-out;
 
+    @include abstracts.breakpoints(lg) {
+        opacity: 1;
+        visibility: visible;
+        position: initial;
+        padding-top: 0px;
+    }
+
     &__inner {
         --inner-padding: 30px;
 
@@ -27,6 +34,17 @@
             translate: -50% 0;
             filter: var(--dropdown-arrow-color);
         }
+
+        @include abstracts.breakpoints(lg) {
+            --inner-padding: 0;
+            box-shadow: none;
+            border-radius: initial;
+            background: transparent;
+
+            &::before {
+                content: "";
+            }
+        }
     }
 }
 
@@ -41,6 +59,12 @@
         height: var(--max-inner-height);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
+
+        @include abstracts.breakpoints(lg) {
+            width: 100%;
+            height: auto;
+            border-right: none;
+        }
     }
 }
 
@@ -58,10 +82,6 @@
         width: 36px;
         height: 36px;
 
-        @include abstracts.breakpoints(xl) {
-            display: none;
-        }
-
         &-1 {
             width: 30px;
             height: 30px;
@@ -77,6 +97,14 @@
             object-fit: contain;
             filter: var(--menu-column-icon-color);
         }
+
+        @include abstracts.breakpoints(xl) {
+            display: none;
+        }
+
+        @include abstracts.breakpoints(lg) {
+            display: block;
+        }
     }
 
     &__content {
@@ -88,10 +116,18 @@
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+
+        @include abstracts.breakpoints(lg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__list {
         margin-top: 19px;
+
+        @include abstracts.breakpoints(lg) {
+            margin-top: 0;
+        }
     }
 
     &__item {
@@ -122,6 +158,12 @@
     position: absolute;
     inset: 0 0 0 var(--main-column-width);
     overflow-y: auto;
+
+    @include abstracts.breakpoints(lg) {
+        position: initial;
+        grid-template-columns: 1fr;
+        padding-top: 7px;
+    }
 
     &--not-main {
         display: grid;

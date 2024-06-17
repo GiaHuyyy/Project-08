@@ -45,7 +45,7 @@
         padding: 40px;
         background: #fff;
         z-index: 9;
-        transform: translateX(-100%);
+        // transform: translateX(-100%);
         transition: transform 0.5s;
 
         &.show {
@@ -88,6 +88,8 @@
         @include abstracts.breakpoints(lg) {
             align-items: flex-start;
             flex-direction: column;
+            height: calc(100% - 30px);
+            overflow-y: auto;
         }
     }
 
@@ -98,10 +100,10 @@
         }
 
         @include abstracts.breakpoints(lg) {
-            &:hover .dropdown {
-                opacity: 0;
-                visibility: hidden;
-            }
+            // &:hover .dropdown {
+            //     opacity: 0;
+            //     visibility: hidden;
+            // }
             width: 100%;
         }
     }
