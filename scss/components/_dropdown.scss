@@ -42,7 +42,7 @@
             background: transparent;
 
             &::before {
-                content: "";
+                content: none;
             }
         }
     }
@@ -171,5 +171,18 @@
         position: initial;
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
+
+        @include abstracts.breakpoints(lg) {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+    }
+
+    &__column {
+        @include abstracts.breakpoints(lg) {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
     }
 }
