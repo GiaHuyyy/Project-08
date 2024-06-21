@@ -1439,12 +1439,17 @@ html.dark {
   }
 }
 .navbar__item:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 @media (max-width: 991.98px) {
   .navbar__item {
     width: calc(100% - 40px);
+  }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
   }
 }
 .navbar__link {
@@ -1465,6 +1470,15 @@ html.dark {
 }
 .navbar__arrow {
   margin-top: 3px;
+}
+@media (max-width: 991.98px) {
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 
 .top-act {
@@ -1549,14 +1563,10 @@ html.dark {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease-in-out;
+  display: none;
 }
 @media (max-width: 991.98px) {
   .dropdown {
-    opacity: 1;
-    visibility: visible;
     position: initial;
     padding-top: 0px;
   }
