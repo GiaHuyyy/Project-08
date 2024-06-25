@@ -5,12 +5,12 @@
     align-items: center;
     column-gap: 14px;
 
-    @include abstracts.breakpoints(lg) {
+    @include abstracts.screen(lg) {
         column-gap: 10px;
         margin-left: 39px;
     }
 
-    @include abstracts.breakpoints(md) {
+    @include abstracts.screen(md) {
         margin-left: 0;
     }
 
@@ -19,13 +19,13 @@
         font-weight: 700;
         line-height: 145.455%;
 
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             font-size: 1.8rem;
         }
     }
 
     &__img {
-        @include abstracts.breakpoints(lg) {
+        @include abstracts.screen(lg) {
             width: 24px;
         }
     }
