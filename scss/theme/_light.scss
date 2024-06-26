@@ -40,4 +40,17 @@ html {
     @include abstracts.screen(md) {
         --cate-item-bg: #fff;
     }
+
+    // Buttons
+    --filter-btn-bg: #fff;
+    --filter-btn-color: #6c6c72;
+    --filter-icon-color: brightness(0) saturate(100%) invert(4%) sepia(44%) saturate(3579%) hue-rotate(239deg)
+        brightness(99%) contrast(90%);
+    --like-btn-bg: #fff;
+    --like-btn-shadow:rgba(124, 124, 124, 0.20);
+
+    // Product card
+    --product-card-bg: #fff;
+    --product-shadow-color: rgba(237, 237, 246, 0.2);
+    --product-card-brand: #9e9da8;
 }

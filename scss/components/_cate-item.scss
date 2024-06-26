@@ -11,12 +11,8 @@
     background: var(--cate-item-bg);
     transition: 0.3s;
 
-    &:hover {
-        translate: 0 -10px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
     @include abstracts.screen(xl) {
+        margin-top: 0;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -25,6 +21,11 @@
         flex-direction: row;
         align-items: center;
         border-radius: 10px;
+    }
+
+    &:hover {
+        translate: 0 -10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
     &__thumb {
