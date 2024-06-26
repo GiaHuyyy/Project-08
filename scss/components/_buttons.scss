@@ -31,12 +31,6 @@
     background: var(--like-btn-bg);
     box-shadow: 0px 20px 60px var(--like-btn-shadow);
 
-    &__liked &__icon {
-        // filter: brightness(0) saturate(100%) invert(34%) sepia(90%) saturate(1302%) hue-rotate(335deg) brightness(102%)
-        //     contrast(95%);
-        // background: red;
-    }
-
     &__icon--liked {
         margin-top: 6px;
     }
