@@ -173,6 +173,7 @@ select {
   color: inherit;
   border: none;
   outline: none;
+  padding: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -2214,6 +2215,7 @@ html.dark {
   padding: 0 16px;
   border-radius: 6px;
   font-size: 1.5rem;
+  font-weight: 500;
   line-height: 146.667%;
   background: transparent;
 }
@@ -2223,7 +2225,7 @@ html.dark {
   color: #9e9da8;
 }
 .filter__form-search-icon {
-  margin-right: 16px;
+  padding-right: 16px;
 }
 .filter__row {
   display: flex;
