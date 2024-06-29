@@ -2144,25 +2144,19 @@ html.dark {
   position: absolute;
   top: 56px;
   right: 0;
-  padding: 30px;
+  padding: 30px 0;
   border-radius: 20px;
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
   transition: 0.3s;
 }
-@media (max-width: 1199.98px) {
-  .filter {
-    padding-bottom: 0;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-}
 @media (max-width: 575.98px) {
   .filter {
-    height: initial;
-    width: 85vw;
-    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    inset: 0;
+    border-radius: 0;
   }
 }
 .filter.hide {
@@ -2259,6 +2253,11 @@ html.dark {
     width: 100%;
   }
 }
+@media (max-width: 575.98px) {
+  .filter__form-input {
+    font-size: 1.6rem;
+  }
+}
 .filter__form-select-wrap {
   display: flex;
   align-items: center;
@@ -2279,10 +2278,10 @@ html.dark {
 }
 @media (max-width: 1199.98px) {
   .filter__form-select {
-    width: 60%;
+    flex: 2;
   }
   .filter__form-select + .filter__form-select {
-    width: 40%;
+    flex: 1.4;
   }
 }
 .filter__form-tags {
@@ -2339,6 +2338,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .filter__form-search::placeholder {
+    font-size: 1.6rem;
     font-weight: 400;
   }
 }
@@ -2370,18 +2370,12 @@ html.dark {
   justify-content: flex-end;
   margin-top: 32px;
 }
-@media (max-width: 1199.98px) {
-  .filter__footer {
-    position: sticky;
-    bottom: 0;
-    padding-bottom: 20px;
-    background: var(--filter-form-bg);
-  }
-}
 @media (max-width: 575.98px) {
   .filter__footer {
-    padding-bottom: 0;
+    position: sticky;
     margin-top: 18px;
+    bottom: 30px;
+    background: var(--filter-form-bg);
   }
 }
 .filter__cancel, .filter__submit {
@@ -2400,11 +2394,30 @@ html.dark {
 }
 .filter__submit {
   font-size: 1.4rem;
-  color: #1A162E;
+  color: #1a162e;
+}
+.filter__footer, .filter__heading, .filter__content {
+  padding: 0 30px;
+}
+@media (max-width: 575.98px) {
+  .filter__footer, .filter__heading, .filter__content {
+    padding: 0 20px;
+  }
+}
+.filter__content {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 @media (max-width: 1199.98px) {
   .filter__content {
     flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__content {
+    max-height: calc(100vh - 230px);
+    padding-bottom: 60px;
   }
 }
 
