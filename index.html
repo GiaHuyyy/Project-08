@@ -108,19 +108,19 @@
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <!-- Filter wrap -->
                     <div class="filter-wrap">
-                        <button class="filter-btn">
+                        <button class="filter-btn js-toggle" toggle-target="#home-filter">
                             Filter
                             <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon" />
                         </button>
 
                         <!-- Filter -->
-                        <div class="filter">
+                        <div id="home-filter" class="filter hide">
                             <!-- Icon -->
                             <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
                             <h3 class="filter__heading">Filter</h3>
                             <form action="" class="filter__form">
-                                <!-- Filter row 2 -->
-                                <div class="filter__row">
+                                <!-- Filter row 1 -->
+                                <div class="filter__row filter__content">
                                     <!-- Filter column 1 -->
                                     <div class="filter__col">
                                         <label for="" class="filter__form-label">Price</label>
@@ -211,7 +211,7 @@
                                                 <img
                                                     src="./assets/icons/search.svg"
                                                     alt=""
-                                                    class="filter__form-search-icon"
+                                                    class="filter__form-search-icon icon"
                                                 />
                                             </div>
                                         </div>
@@ -226,10 +226,17 @@
                                     </div>
                                 </div>
 
-                                <!-- Filter row 1 -->
+                                <!-- Filter row 2 -->
                                 <div class="filter__row filter__footer">
-                                    <button class="btn btn--text filter__cancel">Cancel</button>
-                                    <button class="btn btn--primary filter__submit">Show Result</button>
+                                    <button class="btn btn--text filter__cancel js-toggle" toggle-target="#home-filter">
+                                        Cancel
+                                    </button>
+                                    <button
+                                        class="btn btn--primary filter__submit js-toggle"
+                                        toggle-target="#home-filter"
+                                    >
+                                        Show Result
+                                    </button>
                                 </div>
                             </form>
                         </div>
