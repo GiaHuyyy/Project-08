@@ -2,8 +2,7 @@
 
 .footer {
     &__inner {
-        height: 1000px;
-        background: #ccc;
+        background: var(--footer-bg-color);
     }
 
     &-top {
@@ -102,6 +101,72 @@
         &-icon {
             width: 12px;
             filter: var(--footer-top-icon-color);
+        }
+    }
+
+    &-content {
+        margin-top: -40px;
+
+        @include abstracts.screen(md) {
+            margin-top: -90px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin-top: -110px;
+        }
+    }
+
+    &-logo {
+        margin-bottom: 35px;
+
+        @include abstracts.screen(lg) {
+            margin-left: 0;
+        }
+    }
+
+    &-item {
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        &__title,
+        &__link {
+            color: var(--footer-content-color);
+        }
+
+        &__list {
+            margin-top: 10px;
+        }
+
+        &__link {
+            position: relative;
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 1.5rem;
+            line-height: 140%;
+
+            &::before {
+                position: absolute;
+                content: "";
+                right: 0;
+                bottom: 0;
+                width: 0%;
+                height: 1px;
+                background-color: #2bd7e3;
+                background-image: linear-gradient(73deg, #2bd7e3 5%, #ffffff 100%);
+                transition: 0.5s;
+            }
+
+            &:hover::before {
+                left: 0;
+                width: 100%;
+            }
+
+            &:hover {
+                opacity: 0.9;
+            }
         }
     }
 }
