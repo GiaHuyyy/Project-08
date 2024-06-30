@@ -2043,7 +2043,7 @@ html.dark {
 }
 @media (max-width: 575.98px) {
   .filter__form-input {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .filter__form-select-wrap {
@@ -2542,6 +2542,7 @@ html.dark {
 }
 .footer-content {
   margin-top: -40px;
+  font-size: 1.4rem;
 }
 @media (max-width: 767.98px) {
   .footer-content {
@@ -2576,7 +2577,6 @@ html.dark {
   position: relative;
   display: inline-block;
   padding: 5px 0;
-  font-size: 1.5rem;
   line-height: 140%;
 }
 .footer-item__link::before {
@@ -2617,7 +2617,7 @@ html.dark {
 .footer__copyright {
   display: flex;
   column-gap: 10px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--footer-content-color);
 }
 .footer__system {
