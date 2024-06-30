@@ -58,4 +58,10 @@ html {
     --filter-form-bg: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-form-tag-bg: #f8f8fb;
+
+    //Footer
+    --footer-top-color: #fff;
+    --footer-top-icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg)
+        brightness(103%) contrast(103%);
+    --footer-top-btn-sign-up: #1a162e;
 }

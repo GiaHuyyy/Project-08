@@ -56,4 +56,10 @@ html.dark {
     --filter-form-tag-bg: #171c28;
     --filter-form-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(13%) saturate(1098%) hue-rotate(183deg)
         brightness(102%) contrast(86%);
+
+    //Footer
+    --footer-top-color: #1a162e;
+    --footer-top-icon-color: brightness(0) saturate(100%) invert(3%) sepia(94%) saturate(2195%) hue-rotate(242deg)
+        brightness(95%) contrast(89%);
+    --footer-top-btn-sign-up: #ffffff;
 }

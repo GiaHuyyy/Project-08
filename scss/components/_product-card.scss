@@ -34,16 +34,23 @@
         right: 0;
     }
 
-    &__title {
-        margin-top: 16px;
-    }
-
     &__title,
     &__price,
     &__score {
         font-size: 1.6rem;
         font-weight: 500;
         line-height: 150%;
+    }
+
+    &__title {
+        margin-top: 16px;
+
+        @include abstracts.screen(md) {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
     }
 
     &__brand {
