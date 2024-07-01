@@ -46,6 +46,9 @@
 
 // Buttons
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 46px;
     padding: 0 20px;
     font-size: 1.8rem;
