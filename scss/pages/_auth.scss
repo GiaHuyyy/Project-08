@@ -39,8 +39,7 @@
         }
 
         &-img {
-            width: var(--width);
-            max-width: 100%;
+            width: min(424px, 100%);
         }
 
         &-text {
@@ -128,7 +127,7 @@
             margin-top: 0;
         }
     }
-    
+
     &__link {
         color: #0071dc;
         font-size: 1.5rem;
