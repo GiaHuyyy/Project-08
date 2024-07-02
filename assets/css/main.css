@@ -1388,6 +1388,11 @@ html {
     --cate-item-bg: #fff;
   }
 }
+@media (max-width: 767.98px) {
+  html {
+    --auth-intro-bg: #fff;
+  }
+}
 
 html.dark {
   --text-color: #fff;
@@ -1434,10 +1439,11 @@ html.dark {
   --footer-top-btn-sign-up: #ffffff;
   --footer-bg-color: #171c28;
   --footer-content-color: #9e9da8;
-  --auth-text-color: #B9BABE;
-  --auth-intro-bg: #171C28;
+  --auth-text-color: #b9babe;
+  --auth-intro-bg: #171c28;
   --auth-content-bg: #292e39;
-  --auth-content-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(100%) hue-rotate(191deg) brightness(90%) contrast(90%);
+  --auth-content-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(100%) hue-rotate(191deg)
+      brightness(90%) contrast(90%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2243,6 +2249,11 @@ html.dark {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__text-input {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
@@ -2911,6 +2922,11 @@ html.dark {
   margin: 0 auto;
   padding: 50px 0;
 }
+@media (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 32px 0;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 3rem;
@@ -2919,12 +2935,13 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .auth__heading {
+    margin-top: 40px;
     font-size: 2.2rem;
   }
 }
 .auth__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
@@ -2970,6 +2987,11 @@ html.dark {
 .auth__btn-group {
   margin-top: 50px !important;
 }
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-top: 40px !important;
+  }
+}
 .auth__btn {
   column-gap: 10px;
   width: 100%;
@@ -2977,6 +2999,11 @@ html.dark {
 }
 .auth__btn + .auth__btn {
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .auth__btn + .auth__btn {
+    margin-top: 20px;
+  }
 }
 .auth__btn-icon {
   filter: var(--auth-content-icon-color);
@@ -2989,6 +3016,7 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .auth__text {
+    margin-top: 40px;
     font-size: 1.6rem;
   }
 }

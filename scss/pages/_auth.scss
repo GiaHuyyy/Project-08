@@ -79,6 +79,10 @@
             width: min(460px, 100%);
             margin: 0 auto;
             padding: 50px 0;
+
+            @include abstracts.screen(md) {
+                padding: 32px 0;
+            }
         }
     }
 
@@ -89,13 +93,14 @@
         line-height: 146.667%;
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 2.2rem;
         }
     }
 
     &__desc {
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
@@ -141,6 +146,10 @@
 
     &__btn-group {
         margin-top: 50px !important;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px !important;
+        }
     }
 
     &__btn {
@@ -150,6 +159,10 @@
 
         & + & {
             margin-top: 30px;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
         }
 
         &-icon {
@@ -164,6 +177,7 @@
         line-height: 144.444%;
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 1.6rem;
         }
     }

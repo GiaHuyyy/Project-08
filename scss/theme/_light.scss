@@ -67,5 +67,8 @@ html {
     --footer-bg-color: #eee;
 
     //Auth
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
     --auth-content-bg: #fff;
 }
