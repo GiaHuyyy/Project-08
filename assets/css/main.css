@@ -1321,6 +1321,20 @@ input {
     display: none !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%) saturate(1419%) hue-rotate(210deg) brightness(98%)
@@ -2240,12 +2254,27 @@ html.dark {
   }
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__group {
   margin-top: 30px;
 }
 .form__group-inline {
   display: flex;
   align-items: center;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__text-input {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__input-icon {
+  display: none;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__input-icon-error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)):has(.form__input:not(:focus-within)) .form__error {
+  display: block;
 }
 .form__text-input {
   display: flex;
@@ -2268,22 +2297,62 @@ html.dark {
 .form__input::placeholder {
   color: #d2d1d6;
 }
-.form__input-icon {
+.form__input-icon, .form__input-icon-error {
   margin-right: 12px;
+}
+.form__input-icon-error {
+  display: none;
+  animation: shake 0.8s;
+}
+.form__error {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 10px 0 0 15px;
+  color: red;
+  display: none;
 }
 .form__pull-right {
   margin-left: auto;
 }
 .form__checkbox {
+  position: relative;
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  user-select: none;
+}
+.form__checkbox::before, .form__checkbox::after {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 19px;
+  border: 1.5px solid #9e9da8;
+  border-radius: 6px;
+}
+.form__checkbox::after {
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 8px;
+  border-width: 3px;
+  border-color: transparent transparent #fff #fff;
+  border-radius: 0;
+  rotate: -45deg;
+  display: none;
+}
+.form__checkbox:has(:checked)::before {
+  border-color: #ffb700;
+  background: #ffb700;
+}
+.form__checkbox:has(:checked)::after {
+  display: block;
 }
 .form__checkbox-input {
   width: 19px;
   height: 19px;
 }
 .form__checkbox-label {
+  margin-left: 30px;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
