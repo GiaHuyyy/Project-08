@@ -3,6 +3,11 @@
 .auth {
     display: flex;
     min-height: 100vh;
+
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     color: var(--auth-text-color);
 
     &__intro,
@@ -43,6 +48,11 @@
             font-weight: 500;
             line-height: 144.444%;
             max-width: 412px;
+
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+                line-height: 146.667%;
+            }
         }
     }
 
@@ -77,6 +87,10 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+        }
     }
 
     &__desc {
@@ -86,11 +100,19 @@
         font-weight: 500;
         line-height: 146.667%;
         color: #9e9da8;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         width: 100%;
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 0;
+        }
     }
 
     &__link {
@@ -99,9 +121,17 @@
         font-weight: 500;
         line-height: 146.667%;
 
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+
         &-sign-in {
             font-size: 1.8rem;
             line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
         }
 
         &:hover {
@@ -121,13 +151,20 @@
         & + & {
             margin-top: 30px;
         }
+
+        &-icon {
+            filter: var(--auth-content-icon-color);
+        }
     }
 
     &__text {
         margin-top: 108px;
         color: #9e9da8;
         font-size: 1.8rem;
-        font-weight: 400;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 }

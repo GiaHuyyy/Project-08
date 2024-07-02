@@ -30,6 +30,29 @@
     @include abstracts.screen(sm) {
         padding: 16px 0;
     }
+
+    &__logo {
+        @include abstracts.screen(lg) {
+            column-gap: 10px !important;
+            margin-left: 39px;
+
+            &-title {
+                font-size: 1.8rem !important;
+            }
+
+            &-img {
+                width: 24px;
+            }
+        }
+
+        @include abstracts.screen(md) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            margin-left: 0;
+        }
+    }
 }
 
 .navbar {
@@ -175,7 +198,7 @@
 
     @include abstracts.screen(md) {
         margin-left: 0;
-        
+
         &__sign-up {
             font-size: 1.5rem;
             height: 40px;
