@@ -26,7 +26,7 @@ function changeSlide(sliderIndex) {
 function updateSlideWidth() {
     // Lấy kích thước của phần tử có class .container (cha)
     const containerWidth = document.querySelector(".product-preview__list").offsetWidth;
-
+    sliderWidth = containerWidth;
     sliderItems.forEach((slide) => {
         // Đặt kích thước của mỗi slide bằng kích thước của phần tử có class .container (cha)
         slide.style.width = `${containerWidth}px`;
