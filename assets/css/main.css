@@ -1372,6 +1372,9 @@ html {
   --footer-top-btn-sign-up: #1a162e;
   --footer-bg-color: #eee;
   --auth-content-bg: #fff;
+  --product-detail-bg: #fff;
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1444,6 +1447,9 @@ html.dark {
   --auth-content-bg: #292e39;
   --auth-content-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(100%) hue-rotate(191deg)
       brightness(90%) contrast(90%);
+  --product-detail-bg: #292e39;
+  --breadcrumbs-bg: #171c28;
+  --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2380,6 +2386,52 @@ html.dark {
   background: rgba(39, 243, 117, 0.2);
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  min-height: 64px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background: var(--breadcrumbs-bg);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs {
+    gap: 16px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}
+.breadcrumbs__item {
+  height: 100%;
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9e9da8;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+  }
+}
+.breadcrumbs__link--current {
+  color: inherit;
+}
+.breadcrumbs__link:hover {
+  color: #2bd7e3;
+}
+.breadcrumbs__link:hover .breadcrumbs__icon {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg) brightness(90%) contrast(98%);
+}
+
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -3038,6 +3090,16 @@ html.dark {
     margin-top: 40px;
     font-size: 1.6rem;
   }
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  background: var(--product-detail-bg);
+  min-height: 80vh;
+}
+.product-container {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

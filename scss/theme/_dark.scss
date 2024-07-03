@@ -71,4 +71,11 @@ html.dark {
     --auth-content-bg: #292e39;
     --auth-content-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(100%) hue-rotate(191deg)
         brightness(90%) contrast(90%);
+
+    //Product detail
+    --product-detail-bg: #292e39;
+
+    //Breadcrumbs
+    --breadcrumbs-bg: #171c28;
+    --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
 }
