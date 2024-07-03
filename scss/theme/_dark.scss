@@ -53,7 +53,7 @@ html.dark {
     //Filter form
     --filter-form-bg: #292e39;
     --filter-form-shadow: rgba(0, 0, 0, 0.4);
-    --filter-form-tag-bg: #171c28;
+    --form-tag-bg: #171c28;
     --filter-form-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(13%) saturate(1098%) hue-rotate(183deg)
         brightness(102%) contrast(86%);
 
@@ -74,6 +74,8 @@ html.dark {
 
     //Product detail
     --product-detail-bg: #292e39;
+    --product-info-bg: #171c28;
+    --product-info-tag-bg: #292e39;
 
     //Breadcrumbs
     --breadcrumbs-bg: #171c28;
