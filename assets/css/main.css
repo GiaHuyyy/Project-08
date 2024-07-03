@@ -3102,11 +3102,12 @@ html.dark {
   margin-top: 30px;
 }
 .product-preview {
-  width: calc(100% - 60px);
+  padding: 0 30px;
   overflow: hidden;
 }
 .product-preview__list {
   display: flex;
+  transition: transform 0.4s;
 }
 .product-preview__item {
   position: relative;
