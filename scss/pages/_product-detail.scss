@@ -68,15 +68,24 @@
 
     &-info {
         padding: 60px;
-        // background: var(--product-info-bg);
-        background: #ccc;
+        background: var(--product-info-bg);
+        // background: #ccc;
 
         &__heading {
             font-size: 2.6rem;
             font-weight: 500;
             line-height: 138.462%;
         }
+
+        &__label {
+        display: inline-block;
+            margin-top: 30px;
+        }
     }
+}
+
+.product-properties {
+    padding-left: 30px;
 }
 
 .product-property {
