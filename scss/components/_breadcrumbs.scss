@@ -11,9 +11,10 @@
     box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow);
 
     @include abstracts.screen(md) {
+        flex-wrap: wrap;
         gap: 16px;
         padding: 20px;
-        flex-wrap: wrap;
+        border-radius: 20px;
     }
 
     &__item {

@@ -5,21 +5,29 @@
         display: flex;
         flex-direction: column;
         background: var(--product-detail-bg);
-        min-height: 80vh;
     }
 
     &-container {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
     }
 
     &-preview {
         padding: 0 30px;
         overflow: hidden;
+        background: var(--product-preview-bg);
 
         @include abstracts.screen(lg) {
             display: flex;
             justify-content: center;
             flex-direction: row-reverse;
+        }
+
+        @include abstracts.screen(md) {
+            padding: 16px;
         }
 
         &__list {
@@ -29,7 +37,7 @@
             transition: transform 0.4s;
 
             @include abstracts.screen(lg) {
-                width: calc(100% - 36px);
+                width: calc(100% - 60px);
             }
 
             @include abstracts.screen(md) {
@@ -62,7 +70,6 @@
             padding: 30px;
 
             @include abstracts.screen(lg) {
-                padding-left: 0;
                 flex-direction: column;
             }
 
@@ -94,7 +101,6 @@
     }
 
     &-info {
-        margin-top: 30px;
         padding: 60px;
         background: var(--product-info-bg);
 
@@ -102,10 +108,21 @@
             padding: 40px;
         }
 
+        @include abstracts.screen(md) {
+            margin-top: 0;
+            padding: 0 16px 16px;
+        }
+
         &__heading {
             font-size: 2.6rem;
             font-weight: 500;
             line-height: 138.462%;
+
+            @include abstracts.screen(sm) {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 144.444%;
+            }
         }
 
         &__label {
@@ -167,6 +184,14 @@
     }
 }
 
+.product-info-content {
+    @include abstracts.screen(md) {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 20px 60px 10px var(--product-container-shadow);
+    }
+}
+
 .product-properties {
     padding-left: 30px;
 
@@ -180,6 +205,10 @@
     align-items: center;
     gap: 16px;
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20;
+    }
 
     &__icon {
         margin-top: 3px;
