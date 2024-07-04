@@ -92,4 +92,7 @@ html {
     @include abstracts.screen(md) {
         --breadcrumbs-bg: #fff;
     }
+
+    //Search bar
+    --search-bar-bg: #fff;
 }

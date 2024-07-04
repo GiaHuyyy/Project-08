@@ -75,11 +75,17 @@ html.dark {
     //Product detail
     --product-container-shadow: rgba(23, 28, 40, 0.2);
     --product-detail-bg: #292e39;
-    --product-preview-bg: #171c28;
     --product-info-bg: #171c28;
     --product-info-tag-bg: #292e39;
+
+    @include abstracts.screen(lg) {
+        --product-preview-bg: #171c28;
+    }
 
     //Breadcrumbs
     --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+    //Search bar
+    --search-bar-bg: #171c28;
 }

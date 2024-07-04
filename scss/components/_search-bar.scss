@@ -1,0 +1,24 @@
+.search-bar {
+    height: 50px;
+    border-radius: 10px;
+    background: var(--search-bar-bg);
+
+    &__input {
+        flex: 1;
+        padding-left: 15px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 142.857%;
+
+        &::placeholder {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #9e9da8;
+            line-height: 142.857%;
+        }
+    }
+
+    &__submit {
+        padding: 0 15px;
+    }
+}
