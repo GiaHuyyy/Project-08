@@ -2584,6 +2584,11 @@ html.dark {
   font-weight: 500;
   line-height: 145.455%;
 }
+@media (max-width: 575.98px) {
+  .review-card__title {
+    font-size: 1.8rem;
+  }
+}
 .review-card__desc {
   margin-top: 10px;
   font-size: 1.6rem;
@@ -3641,11 +3646,14 @@ html.dark {
 .product-tab__content--current {
   display: block;
 }
+.product-tab__text-content {
+  margin-top: -20px;
+}
 
 .product-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 141.667%;
 }
 
