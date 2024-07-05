@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -42,7 +46,6 @@ select {
     outline: none;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
 }
 
 input {
@@ -64,10 +67,12 @@ input {
     }
 }
 
-i, em {
+i,
+em {
     font-style: italic;
 }
 
-b, strong {
+b,
+strong {
     font-weight: 600;
 }

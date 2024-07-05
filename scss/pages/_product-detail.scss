@@ -8,11 +8,11 @@
         padding-bottom: 120px;
 
         @include abstracts.screen(md) {
-            margin-bottom: 160px;
+            padding-bottom: 160px;
         }
 
         @include abstracts.screen(sm) {
-            margin-bottom: 190px;
+            padding-bottom: 190px;
         }
     }
 
@@ -241,7 +241,14 @@
 .product-tab {
     &__list {
         display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px 0;
         margin-left: -30px;
+
+        @include abstracts.screen(md) {
+            margin-left: -10px;
+        }
     }
 
     &__item {
@@ -250,9 +257,19 @@
         font-weight: 500;
         line-height: 145.455%;
         color: #9e9da8;
+        user-select: none;
+        cursor: pointer;
+        white-space: nowrap;
 
         &--current {
             color: inherit;
+            cursor: default;
+        }
+
+        @include abstracts.screen(md) {
+            padding: 8px 10px;
+            font-size: 1.8rem;
+            line-height: 142.857%;
         }
     }
 
