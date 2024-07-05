@@ -307,7 +307,7 @@
     &__arrow {
         position: absolute;
         top: -12px;
-        right: 90px;
+        right: 74px;
         height: 20.5px;
         object-fit: contain;
         filter: var(--act-dropdown-arrow-color);
@@ -374,6 +374,12 @@
         width: 278px;
         margin-left: auto;
         color: #1a162e;
+    }
+
+    &__separate {
+        margin: 20px 0;
+        height: 1px;
+        background: var(--act-dropdown-border-color);
     }
 }
 
