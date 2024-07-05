@@ -1380,6 +1380,7 @@ html {
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --search-bar-bg: #fff;
+  --review-card-bg: #fafafd;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1471,6 +1472,7 @@ html.dark {
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
   --search-bar-bg: #171c28;
+  --review-card-bg: #171c28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2522,6 +2524,45 @@ html.dark {
   padding: 0 15px;
 }
 
+.review-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--review-card-bg);
+}
+.review-card__content {
+  display: flex;
+  gap: 20px;
+}
+.review-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.review-card__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.review-card__desc {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.review-card__ratting {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.review-card__ratting-title {
+  margin-left: 12px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
   align-items: center;
@@ -3190,6 +3231,16 @@ html.dark {
   background: var(--product-detail-bg);
   padding-bottom: 120px;
 }
+@media (max-width: 767.98px) {
+  .product-page {
+    margin-bottom: 160px;
+  }
+}
+@media (max-width: 575.98px) {
+  .product-page {
+    margin-bottom: 190px;
+  }
+}
 .product-container {
   margin-top: 30px;
 }
@@ -3398,6 +3449,37 @@ html.dark {
   margin-top: 4px;
   font-size: 1.4rem;
   line-height: 142.857%;
+}
+
+.product-tab__list {
+  display: flex;
+  margin-left: -30px;
+}
+.product-tab__item {
+  padding: 0 30px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+  color: #9e9da8;
+}
+.product-tab__item--current {
+  color: inherit;
+}
+.product-tab__contents {
+  padding-top: 30px;
+}
+.product-tab__content {
+  display: none;
+}
+.product-tab__content--current {
+  display: block;
+}
+
+.product-content__heading {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
 }
 
 /*# sourceMappingURL=main.css.map */
