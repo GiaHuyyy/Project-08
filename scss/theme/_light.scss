@@ -4,9 +4,10 @@ html {
     --text-color: #1a162e;
     --icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%) saturate(1419%) hue-rotate(210deg) brightness(98%)
         contrast(98%);
-
-    --header-bg-color: #eee;
     --body-bg: #f6f6f6;
+
+    // Header
+    --header-bg-color: #eee;
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
@@ -24,6 +25,11 @@ html {
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
     --dropdown-text-color: #1a162e;
     --top-menu-border-color: #d2d1d6;
+
+    // Action dropdown
+    --act-dropdown-bg: #fff;
+    --act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+    --act-dropdown-border-color: #d2d1d6;
 
     // Sidebar
     --sidebar-icon-color: brightness(0) saturate(100%) invert(7%) sepia(12%) saturate(5646%) hue-rotate(222deg)
@@ -54,25 +60,25 @@ html {
     --product-shadow-color: rgba(237, 237, 246, 0.2);
     --product-card-brand: #9e9da8;
 
-    //Filter form
+    // Filter form
     --filter-form-bg: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --form-tag-bg: #f8f8fb;
 
-    //Footer
+    // Footer
     --footer-top-color: #fff;
     --footer-top-icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg)
         brightness(103%) contrast(103%);
     --footer-top-btn-sign-up: #1a162e;
     --footer-bg-color: #eee;
 
-    //Auth
+    // Auth
     @include abstracts.screen(md) {
         --auth-intro-bg: #fff;
     }
     --auth-content-bg: #fff;
 
-    //Product detail
+    // Product detail
     --product-container-shadow: rgba(237, 237, 246, 0.2);
     --product-detail-bg: #fff;
     --product-preview-tag-bg: #fff;
@@ -85,7 +91,7 @@ html {
         --product-info-bg: #fff;
     }
 
-    //Breadcrumbs
+    // Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
 
@@ -93,10 +99,10 @@ html {
         --breadcrumbs-bg: #fff;
     }
 
-    //Search bar
+    // Search bar
     --search-bar-bg: #fff;
 
-    //Review card
+    // Review card
     --review-card-bg: #fafafd;
 
     @include abstracts.screen(md) {
