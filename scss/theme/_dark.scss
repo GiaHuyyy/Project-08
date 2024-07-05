@@ -27,10 +27,12 @@ html.dark {
         brightness(107%) contrast(95%);
 
     // Action dropdown
-    --act-dropdown-bg: #292e39;
+    --act-dropdown-bg: #2f3441;
     --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
     --act-dropdown-border-color: #171c28;
     --act-dropdown-text-color: #b9babe;
+    --act-dropdown-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(13%) saturate(1098%) hue-rotate(183deg)
+        brightness(102%) contrast(86%);
 
     // Sidebar
     --sidebar-icon-color: brightness(0) saturate(100%) invert(72%) sepia(11%) saturate(17%) hue-rotate(191deg)

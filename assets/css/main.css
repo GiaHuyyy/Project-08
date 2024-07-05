@@ -1453,10 +1453,12 @@ html.dark {
   --top-menu-border-color: #171c28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(88%) sepia(22%) saturate(97%) hue-rotate(202deg)
       brightness(107%) contrast(95%);
-  --act-dropdown-bg: #292e39;
+  --act-dropdown-bg: #2f3441;
   --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
   --act-dropdown-border-color: #171c28;
   --act-dropdown-text-color: #b9babe;
+  --act-dropdown-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(13%) saturate(1098%) hue-rotate(183deg)
+      brightness(102%) contrast(86%);
   --sidebar-icon-color: brightness(0) saturate(100%) invert(72%) sepia(11%) saturate(17%) hue-rotate(191deg)
       brightness(100%) contrast(97%);
   --sidebar-bg: #292e39;
@@ -2934,8 +2936,14 @@ html.dark {
 .top-act__group--single .top-act__btn {
   padding: 13px;
 }
-.top-act__btn {
+.top-act__btn-wrap {
   position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+.top-act__btn {
   column-gap: 10px;
   padding: 13px 20px;
   cursor: pointer;
@@ -2985,16 +2993,30 @@ html.dark {
 .act-dropdown {
   position: absolute;
   width: min(500px, 100vw);
-  top: 77px;
+  top: 48px;
   right: -60px;
+  padding-top: 28px;
   text-align: left;
   color: var(--act-dropdown-text-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity, visibility;
+  transition-duration: 0.4s;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--act-dropdown-bg);
   box-shadow: 0px 40px 90px 20px var(--act-dropdown-shadow);
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -12px;
+  right: 90px;
+  height: 20.5px;
+  object-fit: contain;
+  filter: var(--act-dropdown-arrow-color);
 }
 .act-dropdown__top {
   display: flex;
