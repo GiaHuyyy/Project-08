@@ -106,4 +106,6 @@ html.dark {
     --checkout-cart-info-bg: #171c28;
     --checkout-cart-info-shadow: rgba(23, 28, 40, 0.2);
     --checkout-cart-item-border-color: #292e39;
+    --checkout-icon-color: brightness(0) saturate(100%) invert(81%) sepia(1%) saturate(1513%) hue-rotate(194deg)
+        brightness(98%) contrast(80%);
 }
