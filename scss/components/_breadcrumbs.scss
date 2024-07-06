@@ -45,8 +45,13 @@
         }
 
         &:hover .breadcrumbs__icon {
+            translate: 4px;
             filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg)
                 brightness(90%) contrast(98%);
         }
+    }
+
+    &__icon {
+        transition: 0.3s;
     }
 }

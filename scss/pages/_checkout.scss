@@ -35,8 +35,83 @@
     background: var(--checkout-cart-info-bg);
     box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
 
+    & + & {
+        margin-top: 30px;
+    }
+
     &__list {
         margin-top: -30px;
+    }
+
+    &__bottom {
+        margin-top: 30px;
+    }
+
+    &__continute,
+    &__row {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__sub-label {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    &__continute {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        user-select: none;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:hover {
+                color: #2bd7e3;
+            }
+
+            &:hover .cart-info__continute-icon {
+                translate: -4px;
+                filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg)
+                    brightness(90%) contrast(98%);
+            }
+        }
+
+        &-icon {
+            transition: 0.3s;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        & + & {
+            margin-top: 10px;
+        }
+
+        &--total {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+    }
+
+    &__separate {
+        margin: 30px 0;
+        height: 1px;
+        background: var(--checkout-cart-item-separate-color);
+    }
+
+    &__next-btn {
+        margin-top: 30px;
+        height: 58px;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 145.455%;
     }
 }
 
@@ -44,7 +119,7 @@
     display: flex;
     gap: 30px;
     padding: 30px 0;
-    border-bottom: 1px solid var(--checkout-cart-item-border-color);
+    border-bottom: 1px solid var(--checkout-cart-item-separate-color);
 
     &__thumb {
         width: 172px;
@@ -128,5 +203,35 @@
         & + & {
             margin-left: 10px;
         }
+    }
+}
+
+.gift-item {
+    display: flex;
+    gap: 20px;
+
+    &__icon-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        width: 76px;
+        height: 76px;
+        border-radius: 14px;
+        background: rgb(118, 68, 225, 0.1);
+        // box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 10px;
+        font-size: 1.4rem;
+        line-height: 142.857%;
     }
 }
