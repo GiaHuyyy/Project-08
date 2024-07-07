@@ -1,0 +1,67 @@
+@use "../abstracts";
+
+%fill-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+}
+
+.dialog {
+    @extend %fill-screen;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__content {
+        position: relative;
+        padding: 30px;
+        max-width: min(450px, 100% - 40px);
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        border-radius: 20px;
+        background: var(--dialog-bg);
+        box-shadow: 0px 20px 60px 10px var(--dialog-shadow-color);
+        z-index: 100;
+    }
+
+    &__overlay {
+        @extend %fill-screen;
+        background: rgb($color: #000000, $alpha: 0.4);
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        &__content {
+            padding: 20px;
+        }
+
+        &__bottom {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        &__btn {
+            flex: 1;
+            margin-left: 0 !important;
+        }
+    }
+}

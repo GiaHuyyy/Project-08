@@ -55,7 +55,13 @@
     font-weight: 500;
     border-radius: 6px;
     background: #f8f8fb;
+    white-space: nowrap;
     user-select: none;
+
+    &--small {
+        height: 40px;
+        padding: 0 16px;
+    }
 
     & + & {
         margin-left: 20px;
@@ -64,11 +70,11 @@
     &--text {
         font-weight: 400;
         background: transparent;
-        color: #9e9da8;
     }
 
     &--primary {
         background: #ffb700;
+        color: #1a162e;
     }
 
     &--outline {
