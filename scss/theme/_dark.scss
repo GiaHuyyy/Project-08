@@ -31,8 +31,8 @@ html.dark {
     --act-dropdown-shadow: rgba(23, 28, 40, 0.4);
     --act-dropdown-border-color: #171c28;
     --act-dropdown-text-color: #b9babe;
-    --act-dropdown-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(13%) saturate(1098%) hue-rotate(183deg)
-        brightness(102%) contrast(86%);
+    --act-dropdown-arrow-color: brightness(0) saturate(100%) invert(16%) sepia(27%) saturate(508%) hue-rotate(185deg)
+        brightness(95%) contrast(86%);
 
     // Sidebar
     --sidebar-icon-color: brightness(0) saturate(100%) invert(72%) sepia(11%) saturate(17%) hue-rotate(191deg)
@@ -110,6 +110,11 @@ html.dark {
     --checkout-gift-shadow: rgba(23, 28, 40, 0.2);
     --checkout-icon-color: brightness(0) saturate(100%) invert(81%) sepia(1%) saturate(1513%) hue-rotate(194deg)
         brightness(98%) contrast(80%);
+
+    // Address cart
+    --address-cart-choose-border-color: #b9babe;
+    --address-cart-btn-icon-color: brightness(0) saturate(100%) invert(91%) sepia(6%) saturate(123%) hue-rotate(191deg)
+        brightness(84%) contrast(84%);
 
     // Dialog
     --dialog-bg: #2f3441;

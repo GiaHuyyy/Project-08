@@ -113,8 +113,11 @@ html {
     --checkout-breadcrumbs-bg: #fff;
     --checkout-cart-info-bg: #fff;
     --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
-    --checkout-cart-item-separate-color: #d2d1d6;
+    --checkout-cart-item-border-color: #d2d1d6;
     --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
+
+    // Address cart
+    --address-cart-choose-border-color: #1a162e;
 
     // Dialog
     --dialog-bg: #fff;
