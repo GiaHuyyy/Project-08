@@ -47,19 +47,19 @@
                     <!-- Breadcrumbs -->
                     <ul class="breadcrumbs checkout-page-breadcrumbs">
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link">
+                            <a href="./" class="breadcrumbs__link">
                                 Home
                                 <img src="./assets/icons/arrow-right-2.svg" alt="" class="breadcrumbs__icon" />
                             </a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link">
+                            <a href="./checkout.html" class="breadcrumbs__link">
                                 Checkout
                                 <img src="./assets/icons/arrow-right-2.svg" alt="" class="breadcrumbs__icon" />
                             </a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Shipping </a>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Shipping</a>
                         </li>
                     </ul>
                 </div>
@@ -90,10 +90,16 @@
 
                                     <!-- User address list -->
                                     <div class="user-address__list">
+                                        <!-- Empty user address -->
+                                        <!-- <p class="user-address__message">
+                                            You have not added any address yet.
+                                            <a class="user-address__link" href="#!">Add new address</a>
+                                        </p> -->
+
                                         <!-- User address item 1 -->
                                         <article class="address-cart">
                                             <!-- Address cart left -->
-                                            <div class="address-cart__left" onclick="chooseAddress(this)">
+                                            <div class="address-cart__left">
                                                 <div class="address-cart__choose address-cart__choose--active"></div>
                                                 <div class="address-cart__info">
                                                     <h3 class="address-cart__title">HImran Khan</h3>
@@ -123,7 +129,7 @@
                                         <!-- User address item 2 -->
                                         <article class="address-cart">
                                             <!-- Address cart left -->
-                                            <div class="address-cart__left" onclick="chooseAddress(this)">
+                                            <div class="address-cart__left">
                                                 <div class="address-cart__choose"></div>
                                                 <div class="address-cart__info">
                                                     <h3 class="address-cart__title">HImran Khan</h3>
@@ -153,8 +159,10 @@
                                     </div>
                                 </div>
 
+                                <div class="cart-info__separate"></div>
+
                                 <h2 class="cart-info__sub-heading">Items details</h2>
-                                
+
                                 <!-- Cart info list -->
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
@@ -177,7 +185,7 @@
                                                 </h3>
                                                 <!-- Cart item price -->
                                                 <p class="cart-item__price-wrap">
-                                                    $47.00 |
+                                                    <span class="cart-item__price">$47.00</span>|
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
@@ -190,16 +198,18 @@
                                                             class="cart-item__icon"
                                                         />
                                                     </div>
-                                                    <div class="cart-item__input">
-                                                        <button class="cart-item__input-btn">
+                                                    <div class="cart-item__input cart-item__input--calc">
+                                                        <button
+                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                        >
                                                             <img
                                                                 src="./assets/icons/minus.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
                                                         </button>
-                                                        <span>1</span>
-                                                        <button class="cart-item__input-btn">
+                                                        <span class="cart-item__input-value">1</span>
+                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
                                                             <img
                                                                 src="./assets/icons/plus.svg"
                                                                 alt=""
@@ -258,7 +268,7 @@
                                                 </h3>
                                                 <!-- Cart item price -->
                                                 <p class="cart-item__price-wrap">
-                                                    $53.00 |
+                                                    <span class="cart-item__price">$53.00</span>|
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
@@ -271,16 +281,18 @@
                                                             class="cart-item__icon"
                                                         />
                                                     </div>
-                                                    <div class="cart-item__input">
-                                                        <button class="cart-item__input-btn">
+                                                    <div class="cart-item__input cart-item__input--calc">
+                                                        <button
+                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                        >
                                                             <img
                                                                 src="./assets/icons/minus.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
                                                         </button>
-                                                        <span>2</span>
-                                                        <button class="cart-item__input-btn">
+                                                        <span class="cart-item__input-value">2</span>
+                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
                                                             <img
                                                                 src="./assets/icons/plus.svg"
                                                                 alt=""
@@ -339,7 +351,7 @@
                                                 </h3>
                                                 <!-- Cart item price -->
                                                 <p class="cart-item__price-wrap">
-                                                    $38.65 |
+                                                    <span class="cart-item__price">$38.65</span>|
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
@@ -352,16 +364,18 @@
                                                             class="cart-item__icon"
                                                         />
                                                     </div>
-                                                    <div class="cart-item__input">
-                                                        <button class="cart-item__input-btn">
+                                                    <div class="cart-item__input cart-item__input--calc">
+                                                        <button
+                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                        >
                                                             <img
                                                                 src="./assets/icons/minus.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
                                                         </button>
-                                                        <span>1</span>
-                                                        <button class="cart-item__input-btn">
+                                                        <span class="cart-item__input-value">1</span>
+                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
                                                             <img
                                                                 src="./assets/icons/plus.svg"
                                                                 alt=""
@@ -404,7 +418,7 @@
                                 <!-- Cart bottom -->
                                 <div class="cart-info__bottom d-md-none">
                                     <div class="row">
-                                        <div class="col-8 col-xxl-7">
+                                        <div class="col">
                                             <div class="cart-info__continute">
                                                 <a href="./" class="cart-info__continute-link">
                                                     <img
@@ -414,24 +428,6 @@
                                                     />
                                                     Continue Shopping
                                                 </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-4 col-xxl-5">
-                                            <div class="cart-info__row">
-                                                <span>Subtotal</span>
-                                                <span>$191.65</span>
-                                            </div>
-                                            <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$10.00</span>
-                                            </div>
-
-                                            <div class="cart-info__separate"></div>
-
-                                            <div class="cart-info__row cart-info__row--total">
-                                                <span>Total:</span>
-                                                <span>$201.65</span>
                                             </div>
                                         </div>
                                     </div>
@@ -448,18 +444,18 @@
                                 </div>
                                 <div class="cart-info__row">
                                     <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span>$191.65</span>
+                                    <span class="cart-info__sub-total-price">$191.65</span>
                                 </div>
                                 <div class="cart-info__row">
                                     <span>Shipping</span>
-                                    <span>$10.00</span>
+                                    <span class="cart-info__ship-price">$10.00</span>
                                 </div>
 
                                 <div class="cart-info__separate"></div>
 
                                 <div class="cart-info__row">
                                     <span>Estimated Total</span>
-                                    <span>$201.65</span>
+                                    <span class="cart-info__final-total-price">$201.65</span>
                                 </div>
 
                                 <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn"
@@ -517,6 +513,6 @@
         </div>
 
         <script src="./assets/js/scrollToTop.js"></script>
-        <script src="./assets/js/chooseAddress.js"></script>
+        <script src="./assets/js/addToCart.js"></script>
     </body>
 </html>
