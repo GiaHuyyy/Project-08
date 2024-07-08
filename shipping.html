@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -528,8 +528,8 @@
             <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
             <div class="modal__content">
                 <form action="" class="form">
-                <h2 class="modal__heading">Add new shipping address</h2>
-                <div class="modal__body">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
                         <!-- Form row -->
                         <div class="form__row">
                             <!-- Form group 1 -->
@@ -594,8 +594,80 @@
                                     name=""
                                     id="city"
                                     placeholder="City/District/Town"
-                                    class="form__input"
+                                    class="form__input form__input--select js-toggle"
+                                    toggle-target="#city-dialog"
                                 />
+
+                                <!-- Form select -->
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
+                                    </div>
+
+                                    <!-- Form option -->
+                                    <ul class="form__option-list">
+                                        <li class="form__option">Hà Nội</li>
+                                        <li class="form__option form__option--current">TP Hồ Chí Minh</li>
+                                        <li class="form__option">Đà Nẵng</li>
+                                        <li class="form__option">Hải Phòng</li>
+                                        <li class="form__option">Đà Lạt</li>
+                                        <li class="form__option">Huế</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Quy Nhơn</li>
+                                        <li class="form__option">Buôn Ma Thuột</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Đà Nẵng</li>
+                                        <li class="form__option">Bình Dương</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Tp. Đà Nẵng</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Ngãi</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Ngãi</li>
+                                        <li class="form__option">Bình Phước</li>
+                                        <li class="form__option">Bình Thuận</li>
+                                        <li class="form__option">Lâm Đồng</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Phú Thọ</li>
+                                        <li class="form__option">Thừa Thiên Huế</li>
+                                        <li class="form__option">Tiền Giang</li>
+                                        <li class="form__option">Quảng Trị</li>
+                                        <li class="form__option">Kon Tum</li>
+                                        <li class="form__option">Quảng Nam</li>
+                                        <li class="form__option">Gia Lai</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Nam</li>
+                                        <li class="form__option">Phú Yên</li>
+                                        <li class="form__option">Khánh Hòa</li>
+                                        <li class="form__option">Nghệ An</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Huế</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Thái Bình</li>
+                                        <li class="form__option">Quảng Bình</li>
+                                        <li class="form__option">Quảng Trị</li>
+                                        <li class="form__option">Sóc Trăng</li>
+                                        <li class="form__option">Bà Rịa – Vũng Tàu</li>
+                                        <li class="form__option">Trà Vinh</li>
+                                        <li class="form__option">Vĩnh Long</li>
+                                        <li class="form__option">Đồng Nai</li>
+                                        <li class="form__option">Bình Dương</li>
+                                        <li class="form__option">Đồng Tháp</li>
+                                        <li class="form__option">An Giang</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Bình Phước</li>
+                                        <li class="form__option">Khánh Hòa</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Tây Ninh</li>
+                                        <li class="form__option">Bình Thuận</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Tiền Giang</li>
+                                    </ul>
+                                </div>
+
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                             </div>
                             <p class="form__error">Please enter your city/district/town!</p>
@@ -613,7 +685,10 @@
                         <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
                             Cancel
                         </button>
-                        <button class="btn btn--small btn--primary modal__btn js-toggle" toggle-target="#add-new-address">
+                        <button
+                            class="btn btn--small btn--primary modal__btn js-toggle"
+                            toggle-target="#add-new-address"
+                        >
                             Create
                         </button>
                     </div>

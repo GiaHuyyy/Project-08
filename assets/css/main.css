@@ -195,6 +195,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 9999px var(--modal-bg) inset;
   transition: background-color 9999s;
   border-radius: 8px;
+  caret-color: var(--text-color);
 }
 
 .icon {
@@ -2270,13 +2271,13 @@ html.dark {
 }
 .form__text-input--small, .form__text-area--small {
   border-radius: 8px;
-  border-width: 1px;
 }
 .form__text-area {
   padding: 12px;
   height: 100px;
 }
 .form__text-input {
+  position: relative;
   height: 50px;
 }
 @media (max-width: 767.98px) {
@@ -2320,6 +2321,68 @@ html.dark {
 .form__input-icon-error {
   display: none;
   animation: shake 0.5s;
+}
+.form__select-dialog {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  bottom: 40px;
+  left: -2px;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 8px;
+  transition: 0.3s;
+  min-width: 230px;
+  max-height: 280px;
+  padding: 10px 20px;
+  background: var(--modal-bg);
+  border: 2px solid #d2d1d6;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px 10px var(--modal-shadow-color);
+  z-index: 1;
+}
+.form__select-dialog.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 -8px;
+}
+.form__search {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 34px;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #d2d1d6;
+  border-radius: 10px;
+}
+.form__search-input {
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  font-size: inherit;
+}
+.form__search-icon {
+  height: 18px;
+  flex-shrink: 0;
+  padding: 0 10px;
+}
+.form__option-list {
+  margin-top: 16px;
+  overflow-y: auto;
+}
+.form__option {
+  padding: 10px 0 10px 5px;
+  border-radius: 8px;
+  user-select: none;
+}
+.form__option--current {
+  font-weight: 500;
+  background: rgba(119, 218, 230, 0.5);
+}
+.form__option:hover:not(.form__option--current) {
+  background: #eeeaea;
+  cursor: pointer;
 }
 .form__error {
   text-align: left;

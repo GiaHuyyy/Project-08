@@ -61,6 +61,7 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 9999px var(--modal-bg) inset;
     transition: background-color 9999s;
     border-radius: 8px;
+    caret-color: var(--text-color);
 }
 
 .icon {

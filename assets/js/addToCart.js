@@ -1,6 +1,5 @@
 // Hàm chooseAddress
 const handChooseAddress = document.querySelectorAll(".address-cart__left");
-
 // Gắn sự kiện click cho mỗi phần tử
 handChooseAddress.forEach((element) => {
     element.addEventListener("click", function () {
@@ -9,7 +8,6 @@ handChooseAddress.forEach((element) => {
 });
 function chooseAddress(element) {
     const addressChooseElements = document.querySelectorAll(".address-cart__choose");
-
     // Loại bỏ lớp 'address-cart__choose--active' từ tất cả các phần tử
     addressChooseElements.forEach((el) => {
         el.classList.remove("address-cart__choose--active");
@@ -20,6 +18,24 @@ function chooseAddress(element) {
 
     // Chuyển đổi lớp (class) address-cart__choose--active
     chooseElement.classList.add("address-cart__choose--active");
+}
+
+// Hàm chooseOption
+const handChooseOption = document.querySelectorAll(".form__option");
+// Gắn sự kiện click cho mỗi phần tử
+handChooseOption.forEach((option) => {
+    option.addEventListener("click", function () {
+        chooseOption(option);
+    });
+});
+function chooseOption(option) {
+    // Loại bỏ lớp 'form__option--current' từ tất cả các phần tử
+    handChooseOption.forEach((el) => {
+        el.classList.remove("form__option--current");
+    });
+
+    // Chuyển đổi lớp (class) form__option--current
+    option.classList.add("form__option--current");
 }
 
 // Hàm minus và plus
