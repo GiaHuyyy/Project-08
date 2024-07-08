@@ -141,6 +141,33 @@ $error-color: #ed4337;
             opacity: 1;
             visibility: visible;
             translate: 0 -8px;
+
+            @include abstracts.screen(sm) {
+                translate: 0 0;
+            }
+        }
+
+        @include abstracts.screen(sm) {
+            position: fixed;
+            min-width: initial;
+            max-height: initial;
+            inset: 0;
+            translate: 0 0;
+            border: none;
+            border-radius: 20px;
+        }
+    }
+
+    &__close-dialog {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+        padding: 5px 29px;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
         }
     }
 
@@ -148,17 +175,25 @@ $error-color: #ed4337;
         display: flex;
         align-items: center;
         flex-shrink: 0;
-        height: 34px;
+        height: 38px;
         border-width: 0px 0px 2px 0px;
         border-style: solid;
         border-color: #d2d1d6;
-        border-radius: 10px;
+        border-radius: 14px;
 
         &-input {
             padding-left: 10px;
             height: 100%;
             width: 100%;
             font-size: inherit;
+
+            &::placeholder {
+                color: inherit;
+            }
+
+            @include abstracts.screen(sm) {
+                padding: 0 10px 0 0;
+            }
         }
 
         &-icon {
@@ -166,11 +201,21 @@ $error-color: #ed4337;
             flex-shrink: 0;
             padding: 0 10px;
         }
+
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            flex-direction: row-reverse;
+            margin-top: 20px;
+        }
     }
 
     &__option-list {
         margin-top: 16px;
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__option {
@@ -179,13 +224,18 @@ $error-color: #ed4337;
         user-select: none;
 
         &--current {
+            color: #1a162e;
             font-weight: 500;
-            background: rgb(119, 218, 230, 0.5);
+            background: rgb(119, 218, 230, 0.6);
         }
 
         &:hover:not(&--current) {
-            background: #eeeaea;
+            background: rgb(238, 234, 234, 0.6);
             cursor: pointer;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 13px 0 13px 5px;
         }
     }
 

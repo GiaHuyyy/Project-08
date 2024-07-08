@@ -21,7 +21,9 @@ function chooseAddress(element) {
 }
 
 // Hàm chooseOption
+const cityDialog = document.querySelector("#city-dialog");
 const handChooseOption = document.querySelectorAll(".form__option");
+const inputCity = document.querySelector(".form__input--select");
 // Gắn sự kiện click cho mỗi phần tử
 handChooseOption.forEach((option) => {
     option.addEventListener("click", function () {
@@ -36,6 +38,10 @@ function chooseOption(option) {
 
     // Chuyển đổi lớp (class) form__option--current
     option.classList.add("form__option--current");
+    // Thêm nội dung được chọn vào input
+    inputCity.value = `${option.textContent}/`;
+    cityDialog.classList.remove("show");
+    cityDialog.classList.add("hide");
 }
 
 // Hàm minus và plus

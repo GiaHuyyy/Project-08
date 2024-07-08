@@ -78,6 +78,7 @@
         padding-right: 20px;
         max-height: calc(100vh - 180px);
         overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     &__overlay {

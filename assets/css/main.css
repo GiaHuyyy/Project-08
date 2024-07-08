@@ -2346,15 +2346,42 @@ html.dark {
   visibility: visible;
   translate: 0 -8px;
 }
+@media (max-width: 575.98px) {
+  .form__select-dialog.show {
+    translate: 0 0;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__select-dialog {
+    position: fixed;
+    min-width: initial;
+    max-height: initial;
+    inset: 0;
+    translate: 0 0;
+    border: none;
+    border-radius: 20px;
+  }
+}
+.form__close-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+  padding: 5px 29px;
+  opacity: 0.8;
+}
+.form__close-dialog:hover {
+  opacity: 1;
+}
 .form__search {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 34px;
+  height: 38px;
   border-width: 0px 0px 2px 0px;
   border-style: solid;
   border-color: #d2d1d6;
-  border-radius: 10px;
+  border-radius: 14px;
 }
 .form__search-input {
   padding-left: 10px;
@@ -2362,14 +2389,34 @@ html.dark {
   width: 100%;
   font-size: inherit;
 }
+.form__search-input::placeholder {
+  color: inherit;
+}
+@media (max-width: 575.98px) {
+  .form__search-input {
+    padding: 0 10px 0 0;
+  }
+}
 .form__search-icon {
   height: 18px;
   flex-shrink: 0;
   padding: 0 10px;
 }
+@media (max-width: 991.98px) {
+  .form__search {
+    height: 42px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    flex-direction: row-reverse;
+    margin-top: 20px;
+  }
+}
 .form__option-list {
   margin-top: 16px;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .form__option {
   padding: 10px 0 10px 5px;
@@ -2377,12 +2424,18 @@ html.dark {
   user-select: none;
 }
 .form__option--current {
+  color: #1a162e;
   font-weight: 500;
-  background: rgba(119, 218, 230, 0.5);
+  background: rgba(119, 218, 230, 0.6);
 }
 .form__option:hover:not(.form__option--current) {
-  background: #eeeaea;
+  background: rgba(238, 234, 234, 0.6);
   cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .form__option {
+    padding: 13px 0 13px 5px;
+  }
 }
 .form__error {
   text-align: left;
@@ -2935,6 +2988,7 @@ html.dark {
   padding-right: 20px;
   max-height: calc(100vh - 180px);
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .modal__overlay {
   background: rgba(0, 0, 0, 0.4);
