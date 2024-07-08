@@ -506,7 +506,7 @@
             <img src="./assets/icons/arrow-top.svg" alt="" class="back-To__Top-Btn-img" />
         </button>
 
-        <!-- Modal: Confirm remove shopping cart item -->
+        <!-- Modal: Confirm remove shipping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
             <div class="modal__content">
@@ -523,13 +523,13 @@
             <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
 
-        <!-- Modal: Add new  shopping address -->
-        <div id="add-new-address" class="modal hide">
+        <!-- Modal: Add new  shipping address -->
+        <div id="add-new-address" class="modal show">
             <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
             <div class="modal__content">
+                <form action="" class="form">
                 <h2 class="modal__heading">Add new shipping address</h2>
                 <div class="modal__body">
-                    <form action="" class="form">
                         <!-- Form row -->
                         <div class="form__row">
                             <!-- Form group 1 -->
@@ -561,7 +561,7 @@
                                         placeholder="Name"
                                         class="form__input"
                                         required
-                                        minlength="11"
+                                        minlength="10"
                                     />
                                     <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
                                 </div>
@@ -608,16 +608,16 @@
                                 <span class="form__checkbox-label">Set as default address</span>
                             </label>
                         </div>
-                    </form>
-                </div>
-                <div class="modal__bottom">
-                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
-                        Cancel
-                    </button>
-                    <button class="btn btn--small btn--primary modal__btn js-toggle" toggle-target="#add-new-address">
-                        Create
-                    </button>
-                </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--small btn--primary modal__btn js-toggle" toggle-target="#add-new-address">
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="modal__overlay"></div>
         </div>
