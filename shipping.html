@@ -82,7 +82,10 @@
                                             <h2 class="user-address__title">Shipping address</h2>
                                             <p class="user-address__desc">Where should we deliver your order?</p>
                                         </div>
-                                        <button class="btn btn--primary btn--rounded user-address__btn">
+                                        <button
+                                            class="btn btn--primary btn--rounded user-address__btn js-toggle"
+                                            toggle-target="#add-new-address"
+                                        >
                                             <img src="./assets/icons/plus.svg" alt="" class="user-address__btn-icon" />
                                             Add new address
                                         </button>
@@ -93,7 +96,7 @@
                                         <!-- Empty user address -->
                                         <!-- <p class="user-address__message">
                                             You have not added any address yet.
-                                            <a class="user-address__link" href="#!">Add new address</a>
+                                            <a class="user-address__link js-toggle" href="#!" toggle-target="#add-new-address">Add new address</a>
                                         </p> -->
 
                                         <!-- User address item 1 -->
@@ -115,7 +118,10 @@
 
                                             <!-- Address cart right -->
                                             <div class="address-cart__right">
-                                                <button class="address-cart__ctr-btn">
+                                                <button
+                                                    class="address-cart__ctr-btn js-toggle"
+                                                    toggle-target="#add-new-address"
+                                                >
                                                     <img
                                                         src="./assets/icons/edit.svg"
                                                         alt=""
@@ -146,7 +152,10 @@
 
                                             <!-- Address cart right -->
                                             <div class="address-cart__right">
-                                                <button class="address-cart__ctr-btn">
+                                                <button
+                                                    class="address-cart__ctr-btn js-toggle"
+                                                    toggle-target="#add-new-address"
+                                                >
                                                     <img
                                                         src="./assets/icons/edit.svg"
                                                         alt=""
@@ -234,7 +243,7 @@
                                                     </button>
                                                     <button
                                                         class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#dialog"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -317,7 +326,7 @@
                                                     </button>
                                                     <button
                                                         class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#dialog"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -400,7 +409,7 @@
                                                     </button>
                                                     <button
                                                         class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#dialog"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -491,25 +500,126 @@
             load("#footer", "./templates/footer.html");
         </script>
 
-        <!-- Dialog / Modal / Popup / Toast / Notification / Alert  -->
+        <!-- Modal / Popup / Toast / Notification / Alert  -->
 
         <button id="back-To__Top-Btn" class="back-To__Top-Btn" onclick="topFunction()" title="Go to top">
             <img src="./assets/icons/arrow-top.svg" alt="" class="back-To__Top-Btn-img" />
         </button>
 
-        <div id="dialog" class="dialog hide">
-            <div class="dialog__content">
-                <div class="dialog__text">You want to delete this item?</div>
-                <div class="dialog__bottom">
-                    <button class="btn btn--small btn--text dialog__btn js-toggle" toggle-target="#dialog">
+        <!-- Modal: Confirm remove shopping cart item -->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+            <div class="modal__content">
+                <div class="modal__text">You want to delete this item?</div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
-                    <button class="btn btn--small btn--primary dialog__btn js-toggle" toggle-target="#dialog">
+                    <button class="btn btn--small btn--primary modal__btn js-toggle" toggle-target="#delete-confirm">
                         Confirm
                     </button>
                 </div>
             </div>
-            <div class="dialog__overlay js-toggle" toggle-target="#dialog"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <!-- Modal: Add new  shopping address -->
+        <div id="add-new-address" class="modal hide">
+            <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
+            <div class="modal__content">
+                <h2 class="modal__heading">Add new shipping address</h2>
+                <div class="modal__body">
+                    <form action="" class="form">
+                        <!-- Form row -->
+                        <div class="form__row">
+                            <!-- Form group 1 -->
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="2"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Name must at least 2 characters</p>
+                            </div>
+
+                            <!-- Form group 2 -->
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="11"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Phone must at 11 characters</p>
+                            </div>
+                        </div>
+
+                        <!-- Form group 3 -->
+                        <div class="form__group">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-area form__text-area--small">
+                                <textarea
+                                    type="address"
+                                    id="address"
+                                    placeholder="Address (Area and Street)"
+                                    class="form__text-area-input"
+                                    required
+                                ></textarea>
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Address not empty</p>
+                        </div>
+
+                        <!-- Form group 4 -->
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="city"
+                                    placeholder="City/District/Town"
+                                    class="form__input"
+                                />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Please enter your city/district/town!</p>
+                        </div>
+
+                        <!-- Form group 5 -->
+                        <div class="form__group form__group-inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input" hidden />
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                        Cancel
+                    </button>
+                    <button class="btn btn--small btn--primary modal__btn js-toggle" toggle-target="#add-new-address">
+                        Create
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay"></div>
         </div>
 
         <script src="./assets/js/scrollToTop.js"></script>
