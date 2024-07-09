@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment | Grocery Mart</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+
+        <main class="checkout-page">
+            <div class="container">
+                <!-- Search bar -->
+                <div class="checkout-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <!-- checkout breadcrumbs -->
+                <div class="checkout-container">
+                    <!-- Breadcrumbs -->
+                    <ul class="breadcrumbs checkout-page-breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="./" class="breadcrumbs__link">
+                                Home
+                                <img src="./assets/icons/arrow-right-2.svg" alt="" class="breadcrumbs__icon" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="./checkout.html" class="breadcrumbs__link">
+                                Checkout
+                                <img src="./assets/icons/arrow-right-2.svg" alt="" class="breadcrumbs__icon" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="./checkout.html" class="breadcrumbs__link">
+                                Shipping
+                                <img src="./assets/icons/arrow-right-2.svg" alt="" class="breadcrumbs__icon" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Payment</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Checkout content -->
+                <div class="checkout-container">
+                    <div class="row gy-xl-3">
+                        <!-- Cart info -->
+                        <div class="col-8 col-xl-12">
+                            <div class="cart-info">
+                                <h2 class="cart-info__sub-heading">
+                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                </h2>
+
+                                <!-- Address cart right -->
+                                <div class="address-cart__right">
+                                    <button class="address-cart__ctr-btn js-toggle" toggle-target="#add-new-address">
+                                        <img src="./assets/icons/edit.svg" alt="" class="address-cart__ctr-btn-icon" />
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cart-info">
+                                <h2 class="cart-info__sub-heading">2. Shipping method</h2>
+                                <div class="cart-info__separate"></div>
+                                <!-- Address cart right -->
+                                <div class="address-cart__right">
+                                    <button class="address-cart__ctr-btn js-toggle" toggle-target="#add-new-address">
+                                        <img src="./assets/icons/edit.svg" alt="" class="address-cart__ctr-btn-icon" />
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="col-4 col-xl-12">
+                            <div class="cart-info">
+                                <h2 class="cart-info__sub-heading">Payment Details</h2>
+                                <div class="cart-info__row">
+                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
+                                    <span>3</span>
+                                </div>
+                                <div class="cart-info__row">
+                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
+                                    <span class="cart-info__sub-total-price">$191.65</span>
+                                </div>
+                                <div class="cart-info__row">
+                                    <span>Shipping</span>
+                                    <span class="cart-info__ship-price">$10.00</span>
+                                </div>
+
+                                <div class="cart-info__separate"></div>
+
+                                <div class="cart-info__row">
+                                    <span>Estimated Total</span>
+                                    <span class="cart-info__final-total-price">$201.65</span>
+                                </div>
+
+                                <a href="#!" class="btn btn--primary btn--rounded cart-info__next-btn">Pay $465.98</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+
+        <!-- Modal / Popup / Toast / Notification / Alert  -->
+
+        <button id="back-To__Top-Btn" class="back-To__Top-Btn" onclick="topFunction()" title="Go to top">
+            <img src="./assets/icons/arrow-top.svg" alt="" class="back-To__Top-Btn-img" />
+        </button>
+
+        <!-- Modal: Confirm remove shipping cart item -->
+        <div id="delete-confirm" class="modal modal--small hide">
+            <!-- <button class="modal__close js-toggle" toggle-target="#delete-confirm">&times;</button> -->
+            <div class="modal__content">
+                <div class="modal__text">You want to delete this item?</div>
+                <div class="modal__bottom">
+                    <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--primary btn--danger modal__btn js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Delete
+                    </button>
+                </div>
+            </div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <!-- Modal: Add new  shipping address -->
+        <div id="add-new-address" class="modal hide">
+            <!-- <button class="modal__close js-toggle" toggle-target="#add-new-address">&times;</button> -->
+            <div class="modal__content">
+                <form action="" class="form">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
+                        <!-- Form row -->
+                        <div class="form__row">
+                            <!-- Form group 1 -->
+                            <div class="form__group">
+                                <label for="name" class="form__label form__label--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="2"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Name must at least 2 characters</p>
+                            </div>
+
+                            <!-- Form group 2 -->
+                            <div class="form__group">
+                                <label for="phone" class="form__label form__label--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="10"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error">Phone must at 11 characters</p>
+                            </div>
+                        </div>
+
+                        <!-- Form group 3 -->
+                        <div class="form__group">
+                            <label for="address" class="form__label form__label--small">Address</label>
+                            <div class="form__text-area form__text-area--small">
+                                <textarea
+                                    type="address"
+                                    id="address"
+                                    placeholder="Address (Area and Street)"
+                                    class="form__text-area-input"
+                                    required
+                                ></textarea>
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Address not empty</p>
+                        </div>
+
+                        <!-- Form group 4 -->
+                        <div class="form__group">
+                            <label for="city" class="form__label form__label--small">City/District/Town</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="city"
+                                    value="TP Hồ Chí Minh"
+                                    placeholder="City/District/Town"
+                                    readonly
+                                    class="form__input form__input--select js-toggle"
+                                    toggle-target="#city-dialog"
+                                />
+
+                                <!-- Form select -->
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <button
+                                        class="form__close-dialog d-none d-sm-block js-toggle"
+                                        toggle-target="#city-dialog"
+                                    >
+                                        &times;
+                                    </button>
+                                    <div class="form__search">
+                                        <input type="text" placeholder="Search" class="form__search-input" />
+                                        <img src="./assets/icons/search.svg" alt="" class="form__search-icon icon" />
+                                    </div>
+
+                                    <!-- Form option -->
+                                    <ul class="form__option-list">
+                                        <li class="form__option">Hà Nội</li>
+                                        <li class="form__option form__option--current">TP Hồ Chí Minh</li>
+                                        <li class="form__option">Đà Nẵng</li>
+                                        <li class="form__option">Hải Phòng</li>
+                                        <li class="form__option">Đà Lạt</li>
+                                        <li class="form__option">Huế</li>
+                                        <li class="form__option">Nha Trang</li>
+                                        <li class="form__option">Quy Nhơn</li>
+                                        <li class="form__option">Buôn Ma Thuột</li>
+                                        <li class="form__option">Cần Thơ</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Đà Nẵng</li>
+                                        <li class="form__option">Bình Dương</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Tp. Đà Nẵng</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Ngãi</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Ngãi</li>
+                                        <li class="form__option">Bình Phước</li>
+                                        <li class="form__option">Bình Thuận</li>
+                                        <li class="form__option">Lâm Đồng</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Phú Thọ</li>
+                                        <li class="form__option">Thừa Thiên Huế</li>
+                                        <li class="form__option">Tiền Giang</li>
+                                        <li class="form__option">Quảng Trị</li>
+                                        <li class="form__option">Kon Tum</li>
+                                        <li class="form__option">Quảng Nam</li>
+                                        <li class="form__option">Gia Lai</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Quảng Nam</li>
+                                        <li class="form__option">Phú Yên</li>
+                                        <li class="form__option">Khánh Hòa</li>
+                                        <li class="form__option">Nghệ An</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Hà Tĩnh</li>
+                                        <li class="form__option">Huế</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Thái Bình</li>
+                                        <li class="form__option">Quảng Bình</li>
+                                        <li class="form__option">Quảng Trị</li>
+                                        <li class="form__option">Sóc Trăng</li>
+                                        <li class="form__option">Bà Rịa – Vũng Tàu</li>
+                                        <li class="form__option">Trà Vinh</li>
+                                        <li class="form__option">Vĩnh Long</li>
+                                        <li class="form__option">Đồng Nai</li>
+                                        <li class="form__option">Bình Dương</li>
+                                        <li class="form__option">Đồng Tháp</li>
+                                        <li class="form__option">An Giang</li>
+                                        <li class="form__option">Bình Định</li>
+                                        <li class="form__option">Bình Phước</li>
+                                        <li class="form__option">Khánh Hòa</li>
+                                        <li class="form__option">Ninh Thuận</li>
+                                        <li class="form__option">Tây Ninh</li>
+                                        <li class="form__option">Bình Thuận</li>
+                                        <li class="form__option">Long An</li>
+                                        <li class="form__option">Tiền Giang</li>
+                                    </ul>
+                                </div>
+
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error">Please enter your city/district/town!</p>
+                        </div>
+
+                        <!-- Form group 5 -->
+                        <div class="form__group form__group-inline">
+                            <label class="form__checkbox">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input" hidden />
+                                <span class="form__checkbox-label">Set as default address</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--small btn--primary modal__btn">Create</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__overlay"></div>
+        </div>
+
+        <script src="./assets/js/scrollToTop.js"></script>
+        <script src="./assets/js/addToCart.js"></script>
+    </body>
+</html>
