@@ -203,7 +203,7 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(lg) {
-            height: 42px;
+            height: 48px;
         }
 
         @include abstracts.screen(sm) {
@@ -216,6 +216,10 @@ $error-color: #ed4337;
         margin-top: 16px;
         overflow-y: auto;
         overscroll-behavior: contain;
+
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 300px;
+        }
     }
 
     &__option {
