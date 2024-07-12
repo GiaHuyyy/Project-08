@@ -39,6 +39,12 @@
         padding: 16px;
     }
 
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     & + & {
         margin-top: 30px;
     }
@@ -47,6 +53,12 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+        }
 
         @include abstracts.screen(md) {
             font-size: 1.6rem;
@@ -152,6 +164,52 @@
         font-size: 2rem;
         font-weight: 500;
         line-height: 145.455%;
+    }
+
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+
+        &-icon {
+            filter: var(--address-cart-btn-icon-color);
+        }
+    }
+
+    &__choose {
+        // appearance: none; Nếu sử dụng input có lớp giả content = "icon.svg"
+        position: relative;
+        margin-top: 4px;
+        width: 19px;
+        height: 19px;
+        border-radius: 5px;
+        border: 1px solid var(--address-cart-choose-border-color);
+        flex-shrink: 0;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 3.5px;
+            left: 3.5px;
+            width: 10px;
+            height: 7px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent transparent #fff #fff;
+            transform: rotate(-45deg);
+            display: none;
+        }
+
+        &--active {
+            background: #67b044;
+            border-color: #67b044;
+
+            &::before {
+                display: block;
+            }
+        }
     }
 }
 
@@ -400,39 +458,6 @@
         cursor: pointer;
     }
 
-    &__choose {
-        position: relative;
-        margin-top: 4px;
-        width: 19px;
-        height: 19px;
-        border-radius: 5px;
-        border: 1px solid var(--address-cart-choose-border-color);
-        flex-shrink: 0;
-
-        &::before {
-            position: absolute;
-            content: "";
-            top: 3.5px;
-            left: 3.5px;
-            width: 10px;
-            height: 7px;
-            border-width: 2px;
-            border-style: solid;
-            border-color: transparent transparent #fff #fff;
-            transform: rotate(-45deg);
-            display: none;
-        }
-
-        &--active {
-            background: #67b044;
-            border-color: #67b044;
-
-            &::before {
-                display: block;
-            }
-        }
-    }
-
     &__title {
         font-size: 1.8rem;
         font-weight: 500;
@@ -475,16 +500,76 @@
         display: flex;
         align-items: flex-end;
     }
+}
 
-    &__ctr-btn {
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--payment-item-bg);
+
+    &__delivery {
+        cursor: pointer;
+    }
+
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc,
+    &__detail {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        &--low {
+            color: #9e9da8;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+    }
+    &__detail {
+        padding: 8px 12px;
+        margin: 0 -8px 0 auto;
+        font-weight: 700;
+        color: #2bd7e3;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &__cost-wrap {
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 1.8rem;
-        line-height: 144.444%;
+        gap: 17px;
+        margin-left: auto;
+    }
 
-        &-icon {
-            filter: var(--address-cart-btn-icon-color);
+    &__cost {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: #9e9da8;
+
+        &--active {
+            color: inherit;
         }
+    }
+
+    &__check {
+        margin-top: 0;
     }
 }

@@ -103,7 +103,7 @@
                                         <article class="address-cart">
                                             <!-- Address cart left -->
                                             <div class="address-cart__left">
-                                                <div class="address-cart__choose address-cart__choose--active"></div>
+                                                <div class="cart-info__choose cart-info__choose--active"></div>
                                                 <div class="address-cart__info">
                                                     <h3 class="address-cart__title">HImran Khan</h3>
                                                     <p class="address-cart__desc">
@@ -119,13 +119,13 @@
                                             <!-- Address cart right -->
                                             <div class="address-cart__right">
                                                 <button
-                                                    class="address-cart__ctr-btn js-toggle"
+                                                    class="cart-info__edit-btn js-toggle"
                                                     toggle-target="#add-new-address"
                                                 >
                                                     <img
                                                         src="./assets/icons/edit.svg"
                                                         alt=""
-                                                        class="address-cart__ctr-btn-icon"
+                                                        class="cart-info__edit-btn-icon"
                                                     />
                                                     Edit
                                                 </button>
@@ -136,7 +136,7 @@
                                         <article class="address-cart">
                                             <!-- Address cart left -->
                                             <div class="address-cart__left">
-                                                <div class="address-cart__choose"></div>
+                                                <div class="cart-info__choose"></div>
                                                 <div class="address-cart__info">
                                                     <h3 class="address-cart__title">HImran Khan</h3>
                                                     <p class="address-cart__desc">
@@ -153,13 +153,13 @@
                                             <!-- Address cart right -->
                                             <div class="address-cart__right">
                                                 <button
-                                                    class="address-cart__ctr-btn js-toggle"
+                                                    class="cart-info__edit-btn js-toggle"
                                                     toggle-target="#add-new-address"
                                                 >
                                                     <img
                                                         src="./assets/icons/edit.svg"
                                                         alt=""
-                                                        class="address-cart__ctr-btn-icon"
+                                                        class="cart-info__edit-btn-icon"
                                                     />
                                                     Edit
                                                 </button>
@@ -515,7 +515,10 @@
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
-                    <button class="btn btn--small btn--primary btn--danger modal__btn js-toggle" toggle-target="#delete-confirm">
+                    <button
+                        class="btn btn--small btn--primary btn--danger modal__btn js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
                         Delete
                     </button>
                 </div>

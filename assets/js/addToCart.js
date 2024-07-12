@@ -1,23 +1,27 @@
-// Hàm chooseAddress
-const handChooseAddress = document.querySelectorAll(".address-cart__left");
+// Kết hợp hai NodeList
+const handChooseElements = document.querySelectorAll(".address-cart__left, .payment-item__delivery");
+
 // Gắn sự kiện click cho mỗi phần tử
-handChooseAddress.forEach((element) => {
+handChooseElements.forEach((element) => {
     element.addEventListener("click", function () {
-        chooseAddress(element);
+        chooseChecked(element, ".cart-info__choose", "cart-info__choose--active");
+        chooseChecked(element, ".payment-item__cost", "payment-item__cost--active");
     });
 });
-function chooseAddress(element) {
-    const addressChooseElements = document.querySelectorAll(".address-cart__choose");
-    // Loại bỏ lớp 'address-cart__choose--active' từ tất cả các phần tử
-    addressChooseElements.forEach((el) => {
-        el.classList.remove("address-cart__choose--active");
+
+function chooseChecked(element, selector, activeClass) {
+    // Lấy tất cả các phần tử cần xử lý
+    const chooseElements = document.querySelectorAll(selector);
+    // Loại bỏ lớp 'activeClass' từ tất cả các phần tử
+    chooseElements.forEach((el) => {
+        el.classList.remove(activeClass);
     });
 
-    // Lấy phần tử .address-cart__choose bên trong phần tử được nhấp vào
-    const chooseElement = element.querySelector(".address-cart__choose");
+    // Lấy phần tử bên trong phần tử được nhấp vào
+    const chooseElement = element.querySelector(selector);
 
-    // Chuyển đổi lớp (class) address-cart__choose--active
-    chooseElement.classList.add("address-cart__choose--active");
+    // Thêm lớp 'activeClass'
+    chooseElement.classList.add(activeClass);
 }
 
 // Hàm chooseOption
