@@ -149,6 +149,125 @@
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
                                 <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                                <p class="cart-info__desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
+
+                                <!-- Form -->
+                                <form action="" class="form cart-info__form">
+                                    <!-- Form group 1 -->
+                                    <div class="form__group">
+                                        <label for="email" class="form__label form__label--medium">Email</label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <!-- Form group 2 -->
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label form__label--medium">
+                                            Card Holder
+                                        </label>
+
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-holder"
+                                                id="card-holder"
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <!-- Form group 3 -->
+                                    <div class="form__group payment__form">
+                                        <label for="card-details" class="form__label form__label--medium">
+                                            Card Details
+                                        </label>
+
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-details"
+                                                id="card-details"
+                                                placeholder="Email"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email is not in correct format</p>
+                                    </div>
+
+                                    <!-- Form row -->
+                                    <div class="form__row">
+                                        <!-- Form group 4 -->
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-expired"
+                                                    id="card-expired"
+                                                    placeholder="MM/YY"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error">Email is not in correct format</p>
+                                        </div>
+
+                                        <!-- Form group 5 -->
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-cvc"
+                                                    id="card-cvc"
+                                                    placeholder="CVC"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error">Email is not in correct format</p>
+                                        </div>
+                                    </div>
+                                </form>
+
                                 <div class="cart-info__row">
                                     <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
                                     <span>3</span>

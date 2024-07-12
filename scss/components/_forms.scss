@@ -328,25 +328,20 @@ $error-color: #ed4337;
     }
 
     &__label {
+        display: block;
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
 
+        &--medium {
+            font-size: 1.8rem !important;
+            margin: 0 0 20px 4px;
+        }
+
         &--small {
             font-size: 1.6rem !important;
-            margin: 0 0 8px 4px;
+            margin: 0 0 10px 4px;
         }
-    }
-
-    &__label--small {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 142.857%;
-    }
-
-    &__label-small {
-        margin-bottom: 10px;
     }
 
     &__content {
@@ -373,8 +368,6 @@ $error-color: #ed4337;
     }
 
     &__group {
-        margin-top: 20px;
-
         &-inline {
             display: flex;
             column-gap: 30px;
