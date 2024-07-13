@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Checkout | Grocery Mart</title>
+        <title>Favourite | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -53,7 +53,7 @@
                             </a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current"> Checkout </a>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Favourite</a>
                         </li>
                     </ul>
                 </div>
@@ -61,13 +61,18 @@
                 <!-- Checkout content -->
                 <div class="checkout-container">
                     <div class="row gy-xl-3">
-                        <!-- Cart info -->
-                        <div class="col-8 col-xl-12">
+                        <div class="col-12">
+                            <!-- Cart info -->
                             <div class="cart-info">
+                                <h1 class="cart-info__heading">Favourite List</h1>
+                                <p class="cart-info__desc">3 items</p>
+                                <div class="cart-info__choose-all"></div>
                                 <!-- Cart info list -->
                                 <div class="cart-info__list">
                                     <!-- Cart item 1 -->
                                     <article class="cart-item">
+                                        <div class="cart-info__choose cart-info__choose--active"></div>
+                                        <!-- Cart item thumb -->
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/img/product/item-1.png"
@@ -90,32 +95,57 @@
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
-                                                <div class="cart-item__ctrl cart-item__ctrl--with-input">
-                                                    <div class="cart-item__input">
-                                                        LavAzza
-                                                        <img
-                                                            src="./assets/icons/arrow-down-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
+                                                <div class="cart-item__ctr-wrap">
+                                                    <div class="cart-item__ctrl cart-item__ctrl--with-input">
+                                                        <div class="cart-item__input">
+                                                            LavAzza
+                                                            <img
+                                                                src="./assets/icons/arrow-down-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                        </div>
+                                                        <div class="cart-item__input cart-item__input--calc">
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/minus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                            <span class="cart-item__input-value">1</span>
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--plus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/plus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div class="cart-item__input cart-item__input--calc">
+                                                    <div class="cart-item__ctrl">
+                                                        <button class="cart-item__ctrl-btn">
+                                                            <img
+                                                                src="./assets/icons/heart-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                            Save
+                                                        </button>
                                                         <button
-                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            class="cart-item__ctrl-btn js-toggle"
+                                                            toggle-target="#delete-confirm"
                                                         >
                                                             <img
-                                                                src="./assets/icons/minus.svg"
+                                                                src="./assets/icons/trash.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
-                                                        </button>
-                                                        <span class="cart-item__input-value">1</span>
-                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
-                                                            <img
-                                                                src="./assets/icons/plus.svg"
-                                                                alt=""
-                                                                class="cart-item__icon"
-                                                            />
+                                                            Delete
                                                         </button>
                                                     </div>
                                                 </div>
@@ -124,33 +154,21 @@
                                             <!-- Cart item content right -->
                                             <div class="cart-item__content-right">
                                                 <p class="cart-item__total-price">$47.00</p>
-                                                <div class="cart-item__ctrl">
-                                                    <button class="cart-item__ctrl-btn">
-                                                        <img
-                                                            src="./assets/icons/heart-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Save
-                                                    </button>
-                                                    <button
-                                                        class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#delete-confirm"
-                                                    >
-                                                        <img
-                                                            src="./assets/icons/trash.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Delete
-                                                    </button>
-                                                </div>
+                                                <!-- Button checkout -->
+                                                <button
+                                                    href="./checkout.html"
+                                                    class="cart-item__checkout-btn btn btn--primary btn--rounded"
+                                                >
+                                                    Check Out
+                                                </button>
                                             </div>
                                         </div>
                                     </article>
 
                                     <!-- Cart item 2 -->
                                     <article class="cart-item">
+                                        <div class="cart-info__choose"></div>
+                                        <!-- Cart item thumb -->
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/img/product/item-2.png"
@@ -173,32 +191,57 @@
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
-                                                <div class="cart-item__ctrl cart-item__ctrl--with-input">
-                                                    <div class="cart-item__input">
-                                                        LavAzza
-                                                        <img
-                                                            src="./assets/icons/arrow-down-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
+                                                <div class="cart-item__ctr-wrap">
+                                                    <div class="cart-item__ctrl cart-item__ctrl--with-input">
+                                                        <div class="cart-item__input">
+                                                            LavAzza
+                                                            <img
+                                                                src="./assets/icons/arrow-down-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                        </div>
+                                                        <div class="cart-item__input cart-item__input--calc">
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/minus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                            <span class="cart-item__input-value">2</span>
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--plus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/plus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div class="cart-item__input cart-item__input--calc">
+                                                    <div class="cart-item__ctrl">
+                                                        <button class="cart-item__ctrl-btn">
+                                                            <img
+                                                                src="./assets/icons/heart-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                            Save
+                                                        </button>
                                                         <button
-                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            class="cart-item__ctrl-btn js-toggle"
+                                                            toggle-target="#delete-confirm"
                                                         >
                                                             <img
-                                                                src="./assets/icons/minus.svg"
+                                                                src="./assets/icons/trash.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
-                                                        </button>
-                                                        <span class="cart-item__input-value">2</span>
-                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
-                                                            <img
-                                                                src="./assets/icons/plus.svg"
-                                                                alt=""
-                                                                class="cart-item__icon"
-                                                            />
+                                                            Delete
                                                         </button>
                                                     </div>
                                                 </div>
@@ -207,33 +250,21 @@
                                             <!-- Cart item content right -->
                                             <div class="cart-item__content-right">
                                                 <p class="cart-item__total-price">$106.00</p>
-                                                <div class="cart-item__ctrl">
-                                                    <button class="cart-item__ctrl-btn">
-                                                        <img
-                                                            src="./assets/icons/heart-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Save
-                                                    </button>
-                                                    <button
-                                                        class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#delete-confirm"
-                                                    >
-                                                        <img
-                                                            src="./assets/icons/trash.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Delete
-                                                    </button>
-                                                </div>
+                                                <!-- Button checkout -->
+                                                <button
+                                                    href="./checkout.html"
+                                                    class="cart-item__checkout-btn btn btn--primary btn--rounded"
+                                                >
+                                                    Check Out
+                                                </button>
                                             </div>
                                         </div>
                                     </article>
 
                                     <!-- Cart item 3 -->
                                     <article class="cart-item">
+                                        <div class="cart-info__choose cart-info__choose--active"></div>
+                                        <!-- Cart item thumb -->
                                         <a href="./product-detail.html">
                                             <img
                                                 src="./assets/img/product/item-4.png"
@@ -256,32 +287,57 @@
                                                     <span class="cart-item__status">In Stock</span>
                                                 </p>
                                                 <!-- Cart item control -->
-                                                <div class="cart-item__ctrl cart-item__ctrl--with-input">
-                                                    <div class="cart-item__input">
-                                                        LavAzza
-                                                        <img
-                                                            src="./assets/icons/arrow-down-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
+                                                <div class="cart-item__ctr-wrap">
+                                                    <div class="cart-item__ctrl cart-item__ctrl--with-input">
+                                                        <div class="cart-item__input">
+                                                            LavAzza
+                                                            <img
+                                                                src="./assets/icons/arrow-down-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                        </div>
+                                                        <div class="cart-item__input cart-item__input--calc">
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/minus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                            <span class="cart-item__input-value">1</span>
+                                                            <button
+                                                                class="cart-item__input-btn cart-item__input-btn--plus"
+                                                            >
+                                                                <img
+                                                                    src="./assets/icons/plus.svg"
+                                                                    alt=""
+                                                                    class="cart-item__icon"
+                                                                />
+                                                            </button>
+                                                        </div>
                                                     </div>
-                                                    <div class="cart-item__input cart-item__input--calc">
+                                                    <div class="cart-item__ctrl">
+                                                        <button class="cart-item__ctrl-btn">
+                                                            <img
+                                                                src="./assets/icons/heart-2.svg"
+                                                                alt=""
+                                                                class="cart-item__icon"
+                                                            />
+                                                            Save
+                                                        </button>
                                                         <button
-                                                            class="cart-item__input-btn cart-item__input-btn--minus"
+                                                            class="cart-item__ctrl-btn js-toggle"
+                                                            toggle-target="#delete-confirm"
                                                         >
                                                             <img
-                                                                src="./assets/icons/minus.svg"
+                                                                src="./assets/icons/trash.svg"
                                                                 alt=""
                                                                 class="cart-item__icon"
                                                             />
-                                                        </button>
-                                                        <span class="cart-item__input-value">1</span>
-                                                        <button class="cart-item__input-btn cart-item__input-btn--plus">
-                                                            <img
-                                                                src="./assets/icons/plus.svg"
-                                                                alt=""
-                                                                class="cart-item__icon"
-                                                            />
+                                                            Delete
                                                         </button>
                                                     </div>
                                                 </div>
@@ -290,27 +346,13 @@
                                             <!-- Cart item content right -->
                                             <div class="cart-item__content-right">
                                                 <p class="cart-item__total-price">$38.65</p>
-                                                <div class="cart-item__ctrl">
-                                                    <button class="cart-item__ctrl-btn">
-                                                        <img
-                                                            src="./assets/icons/heart-2.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Save
-                                                    </button>
-                                                    <button
-                                                        class="cart-item__ctrl-btn js-toggle"
-                                                        toggle-target="#delete-confirm"
-                                                    >
-                                                        <img
-                                                            src="./assets/icons/trash.svg"
-                                                            alt=""
-                                                            class="cart-item__icon"
-                                                        />
-                                                        Delete
-                                                    </button>
-                                                </div>
+                                                <!-- Button checkout -->
+                                                <button
+                                                    href="./checkout.html"
+                                                    class="cart-item__checkout-btn btn btn--primary btn--rounded"
+                                                >
+                                                    Check Out
+                                                </button>
                                             </div>
                                         </div>
                                     </article>
@@ -318,85 +360,22 @@
 
                                 <!-- Cart bottom -->
                                 <div class="cart-info__bottom d-md-none">
-                                    <div class="row">
-                                        <div class="col-8 col-xxl-7">
-                                            <div class="cart-info__continute">
-                                                <a href="./" class="cart-info__continute-link">
-                                                    <img
-                                                        src="./assets/icons/arrow-left.svg"
-                                                        alt=""
-                                                        class="cart-info__continute-icon"
-                                                    />
-                                                    Continue Shopping
-                                                </a>
-                                            </div>
+                                    <div class="cart-info__row">
+                                        <div class="cart-info__continute">
+                                            <a href="./" class="cart-info__continute-link">
+                                                <img
+                                                    src="./assets/icons/arrow-left.svg"
+                                                    alt=""
+                                                    class="cart-info__continute-icon"
+                                                />
+                                                Continue Shopping
+                                            </a>
                                         </div>
-
-                                        <div class="col-4 col-xxl-5">
-                                            <div class="cart-info__row">
-                                                <span>Subtotal</span>
-                                                <span>$191.65</span>
-                                            </div>
-                                            <div class="cart-info__row">
-                                                <span>Shipping:</span>
-                                                <span>$10.00</span>
-                                            </div>
-
-                                            <div class="cart-info__separate"></div>
-
-                                            <div class="cart-info__row cart-info__row--total">
-                                                <span>Total:</span>
-                                                <span>$201.65</span>
-                                            </div>
-                                        </div>
+                                        <button href="./checkout.html" class="btn btn--primary btn--rounded">
+                                            All Check Out
+                                        </button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!--  -->
-                        <div class="col-4 col-xl-12">
-                            <div class="cart-info">
-                                <div class="cart-info__row">
-                                    <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
-                                    <span>3</span>
-                                </div>
-                                <div class="cart-info__row">
-                                    <span>Price <span class="cart-info__sub-label">(Total)</span></span>
-                                    <span class="cart-info__sub-total-price">$191.65</span>
-                                </div>
-                                <div class="cart-info__row">
-                                    <span>Shipping</span>
-                                    <span class="cart-info__ship-price">$10.00</span>
-                                </div>
-
-                                <div class="cart-info__separate"></div>
-
-                                <div class="cart-info__row">
-                                    <span>Estimated Total</span>
-                                    <span class="cart-info__final-total-price">$201.65</span>
-                                </div>
-
-                                <a href="./shipping.html" class="btn btn--primary btn--rounded cart-info__next-btn">
-                                    Continute to checkout
-                                </a>
-                            </div>
-
-                            <!-- Cart info gift-->
-                            <div class="cart-info">
-                                <a href="#!">
-                                    <article class="gift-item">
-                                        <div class="gift-item__icon-wrap">
-                                            <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
-                                        </div>
-                                        <div class="gift-item__content">
-                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
-                                            <p class="gift-item__desc">
-                                                Available items will be shipped to your gift recipient.
-                                            </p>
-                                        </div>
-                                    </article>
-                                </a>
                             </div>
                         </div>
                     </div>

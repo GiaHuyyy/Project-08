@@ -1,27 +1,38 @@
-// Kết hợp hai NodeList
+// Kết hợp các NodeList và gắn sự kiện click
 const handChooseElements = document.querySelectorAll(".address-cart__left, .payment-item__delivery");
-
-// Gắn sự kiện click cho mỗi phần tử
 handChooseElements.forEach((element) => {
     element.addEventListener("click", function () {
-        chooseChecked(element, ".cart-info__choose", "cart-info__choose--active");
-        chooseChecked(element, ".payment-item__cost", "payment-item__cost--active");
+        toggleClass(element, ".cart-info__choose", "cart-info__choose--active");
+        toggleClass(element, ".payment-item__cost", "payment-item__cost--active");
     });
 });
 
-function chooseChecked(element, selector, activeClass) {
-    // Lấy tất cả các phần tử cần xử lý
-    const chooseElements = document.querySelectorAll(selector);
-    // Loại bỏ lớp 'activeClass' từ tất cả các phần tử
-    chooseElements.forEach((el) => {
-        el.classList.remove(activeClass);
+// Gắn sự kiện click cho phần tử chọn tất cả
+const handChooseAllElementsFavorite = document.querySelector(".cart-info__choose-all");
+let selectAllActive = false;
+handChooseAllElementsFavorite.addEventListener("click", function () {
+    selectAllChecked(handChooseAllElementsFavorite, ".cart-info__choose", "cart-info__choose--active");
+});
+
+const handChooseElementsFavourite = document.querySelectorAll(".cart-info__choose");
+handChooseElementsFavourite.forEach((element) => {
+    element.addEventListener("click", function () {
+        element.classList.toggle("cart-info__choose--active");
     });
+});
 
-    // Lấy phần tử bên trong phần tử được nhấp vào
+function toggleClass(element, selector, activeClass) {
+    const chooseElements = document.querySelectorAll(selector);
+    chooseElements.forEach((el) => el.classList.remove(activeClass));
     const chooseElement = element.querySelector(selector);
-
-    // Thêm lớp 'activeClass'
     chooseElement.classList.add(activeClass);
+}
+
+function selectAllChecked(element, selector, activeClass) {
+    const chooseElements = document.querySelectorAll(selector);
+    selectAllActive = !selectAllActive;
+    element.classList.toggle(activeClass, selectAllActive);
+    chooseElements.forEach((el) => el.classList.toggle(activeClass, selectAllActive));
 }
 
 // Hàm chooseOption
