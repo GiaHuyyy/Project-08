@@ -125,5 +125,9 @@ html.dark {
 
     // Profile
     --profile-bg: #171c28;
+    --profile-text-color: #b9babe;
+    --profile-icon-color: brightness(0) saturate(100%) invert(77%) sepia(15%) saturate(11%) hue-rotate(146deg)
+        brightness(95%) contrast(90%);
+    --profile-payment-new-card-border-color: #b9babe;
     --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
 }

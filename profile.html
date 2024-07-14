@@ -44,9 +44,9 @@
 
                 <!-- Profile content -->
                 <div class="profile__container">
-                    <div class="row gy-xl-3">
+                    <div class="row">
                         <!-- Profile sidebar -->
-                        <div class="col-4 col-xl-12">
+                        <div class="col-3">
                             <!-- Profile sidebar -->
                             <aside class="profile__sidebar">
                                 <!-- Profile User -->
@@ -158,8 +158,98 @@
                             </aside>
                         </div>
 
-                        <!--  -->
-                        <div class="col-8 col-xl-12"></div>
+                        <!-- Cart-info -->
+                        <div class="col-9">
+                            <div class="cart-info">
+                                <h2 class="cart-info__heading">My Wallet</h2>
+                                <p class="cart-info__desc profile__desc">Payment methods</p>
+
+                                <!-- Payment card -->
+                                <div class="row row-cols-3">
+                                    <!-- Payment card 1 -->
+                                    <div class="col">
+                                        <article class="payment-card" style="--bg-color: #1e2e69">
+                                            <img
+                                                src="./assets/img/card/plane-bg.svg"
+                                                alt=""
+                                                class="payment-card__img"
+                                            />
+
+                                            <!-- Payment card top -->
+                                            <div class="payment-card__top">
+                                                <img
+                                                    src="./assets/img/card/plane.svg"
+                                                    alt=""
+                                                    class="payment-card__icon"
+                                                />
+                                                <h4 class="payment-card__title">FeatherCard</h4>
+                                            </div>
+
+                                            <!-- Payment card number -->
+                                            <div class="payment-card__number">1234 4567 8901 2221</div>
+
+                                            <!-- Payment card bottom -->
+                                            <div class="payment-card__bottom">
+                                                <div class="payment-card__info">
+                                                    <div class="payment-card__name">
+                                                        <p class="payment-card__label">Card Holder</p>
+                                                        <p class="payment-card__value">Gia Huy</p>
+                                                    </div>
+                                                    <div class="payment-card__expire">
+                                                        <p class="payment-card__label">Expires</p>
+                                                        <p class="payment-card__value">01/23</p>
+                                                    </div>
+                                                </div>
+                                                <span class="payment-card__circle"></span>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <!-- Payment card 2 -->
+                                    <div class="col">
+                                        <article class="payment-card" style="--bg-color: #354151">
+                                            <img src="./assets/img/card/leaf-bg.svg" alt="" class="payment-card__img" />
+
+                                            <!-- Payment card top -->
+                                            <div class="payment-card__top">
+                                                <img
+                                                    src="./assets/img/card/leaf.svg"
+                                                    alt=""
+                                                    class="payment-card__icon"
+                                                />
+                                                <h4 class="payment-card__title">FeatherCard</h4>
+                                            </div>
+
+                                            <!-- Payment card number -->
+                                            <div class="payment-card__number">1234 4567 8901 2221</div>
+
+                                            <!-- Payment card bottom -->
+                                            <div class="payment-card__bottom">
+                                                <div class="payment-card__info">
+                                                    <div class="payment-card__name">
+                                                        <p class="payment-card__label">Card Holder</p>
+                                                        <p class="payment-card__value">Gia Huy</p>
+                                                    </div>
+                                                    <div class="payment-card__expire">
+                                                        <p class="payment-card__label">Expires</p>
+                                                        <p class="payment-card__value">11/22</p>
+                                                    </div>
+                                                </div>
+                                                <span class="payment-card__circle"></span>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <!-- Add new payment card -->
+                                    <div class="col">
+                                        <a href="#!" class="payment-card__new">
+                                            <img src="./assets/icons/plus.svg" alt="" class="payment-card__icon-add" />
+                                            <span class="payment-card__new-text">Add new card</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

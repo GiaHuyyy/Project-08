@@ -1,0 +1,132 @@
+.payment-card {
+    position: relative;
+    z-index: 0;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    background: var(--bg-color);
+    color: #fff;
+
+    overflow: hidden;
+    user-select: none;
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+
+    &__number {
+        margin-top: 37px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 175%;
+    }
+
+    &__value {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%;
+    }
+
+    &__circle {
+        --circle-size: 28px;
+        position: relative;
+
+        width: 42px;
+        height: var(--circle-size);
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: var(--circle-size);
+            height: var(--circle-size);
+            border-radius: 50%;
+        }
+
+        &::before {
+            left: 0;
+            z-index: 1;
+            background: rgb(249, 69, 69);
+            mix-blend-mode: hard-light;
+        }
+
+        &::after {
+            right: 0;
+            background: #ffb700;
+        }
+    }
+
+    &__new {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px dashed var(--profile-payment-new-card-border-color);
+        transition: 0.1s;
+
+        &:hover {
+            border-color: #2bd7e3;
+        }
+
+        &:hover .payment-card__icon-add {
+            filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg)
+                brightness(90%) contrast(98%);
+        }
+
+        &:hover .payment-card__new-text {
+            color: #2bd7e3;
+        }
+    }
+
+    &__icon-add {
+        filter: var(--profile-icon-color);
+        transition: 0.1s;
+    }
+
+    &__new-text {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        transition: 0.1s;
+    }
+}
