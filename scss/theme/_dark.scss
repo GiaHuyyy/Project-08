@@ -5,6 +5,7 @@ html.dark {
     --icon-color: brightness(0) saturate(100%) invert(100%) sepia(50%) saturate(0%) hue-rotate(44deg) brightness(103%)
         contrast(100%);
     --body-bg: #292e39;
+    --separate-color: #292e39;
 
     // Header
     --header-bg-color: #171c28;
@@ -130,4 +131,8 @@ html.dark {
         brightness(95%) contrast(90%);
     --profile-payment-new-card-border-color: #b9babe;
     --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
+
+    // Account info
+    --account-info-bg: #292e39;
+    --account-info-thumb-bg: #171c28;
 }

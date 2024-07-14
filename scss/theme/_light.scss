@@ -5,6 +5,7 @@ html {
     --icon-color: brightness(0) saturate(100%) invert(9%) sepia(23%) saturate(1419%) hue-rotate(210deg) brightness(98%)
         contrast(98%);
     --body-bg: #f6f6f6;
+    --separate-color: #d2d1d6;
 
     // Header
     --header-bg-color: #eee;
@@ -130,4 +131,8 @@ html {
     --profile-bg: #fff;
     --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
     --profile-payment-new-card-border-color: #d2d1d6;
+
+    // Account info #171C28
+    --account-info-bg: #f6f6f6;
+    --account-info-thumb-bg: #fff;
 }
