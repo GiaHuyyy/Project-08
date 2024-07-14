@@ -1418,6 +1418,8 @@ html {
   --payment-item-bg: #f6f6f6;
   --modal-bg: #fff;
   --modal-shadow: rgba(200, 200, 200, 0.4);
+  --profile-bg: #fff;
+  --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1535,6 +1537,8 @@ html.dark {
   --payment-item-bg: #292e39;
   --modal-bg: #2f3441;
   --modal-shadow: rgba(23, 28, 40, 0.4);
+  --profile-bg: #171c28;
+  --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -4705,6 +4709,93 @@ html.dark {
 }
 .payment-item__check {
   margin-top: 0;
+}
+
+.profile {
+  padding-bottom: 120px;
+}
+@media (max-width: 767.98px) {
+  .profile {
+    padding-bottom: 160px;
+  }
+}
+@media (max-width: 575.98px) {
+  .profile {
+    padding-bottom: 190px;
+  }
+}
+.profile__container {
+  margin-top: 30px;
+}
+.profile__sidebar {
+  height: 100%;
+  border-radius: 20px;
+  background: var(--profile-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
+}
+.profile-user {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px 0 20px;
+  background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../img/profile/cover.png") no-repeat center/cover;
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.profile-user__avatar {
+  width: 121px;
+  height: 121px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+  background: #ccc content-box;
+}
+.profile-user__name {
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 144.444%;
+  color: #fff;
+}
+.profile-user__desc {
+  margin-top: 2px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  color: #fff;
+}
+.profile-menu {
+  margin: 30px 30px;
+}
+.profile-menu__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.profile-menu__list {
+  margin-top: 11px;
+}
+.profile-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.profile-menu__link:hover {
+  background: #2bd7e3;
+  background-image: linear-gradient(73deg, #2bd7e3 10%, #e4d1d1 100%);
+}
+.profile-menu__icon {
+  width: 24px;
+  height: 24px;
+  transition: 0.1s;
+}
+.profile-menu__icon > * {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
