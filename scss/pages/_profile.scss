@@ -17,9 +17,9 @@
     }
 
     &__sidebar {
-        height: 100%;
+        padding-bottom: 30px;
         border-radius: 20px;
-        background: var(--profile-bg);
+        background: var(--profile-sidebar-bg);
         box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
     }
 
@@ -32,7 +32,6 @@
             url("../img/profile/cover.png") no-repeat center / cover;
 
         border-radius: 20px 20px 0px 0px;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 
         &__avatar {
             width: 121px;
@@ -62,7 +61,7 @@
     }
 
     &-menu {
-        margin: 30px 30px;
+        margin: 30px 30px 0 30px;
 
         &__title {
             font-size: 1.8rem;
@@ -83,8 +82,14 @@
             transition: 0.2s;
 
             &:hover {
+                color: #1a162e;
                 background: #2bd7e3;
                 background-image: linear-gradient(73deg, #2bd7e3 10%, #e4d1d1 100%);
+            }
+
+            &:hover .profile-menu__icon {
+                filter: brightness(0) saturate(100%) invert(4%) sepia(44%) saturate(3579%) hue-rotate(239deg)
+                    brightness(99%) contrast(90%);
             }
         }
 

@@ -1425,7 +1425,7 @@ html {
   --payment-item-bg: #f6f6f6;
   --modal-bg: #fff;
   --modal-shadow: rgba(200, 200, 200, 0.4);
-  --profile-bg: #fff;
+  --profile-sidebar-bg: #fff;
   --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
   --profile-payment-new-card-border-color: #d2d1d6;
   --account-info-bg: #f6f6f6;
@@ -1548,7 +1548,7 @@ html.dark {
   --payment-item-bg: #292e39;
   --modal-bg: #2f3441;
   --modal-shadow: rgba(23, 28, 40, 0.4);
-  --profile-bg: #171c28;
+  --profile-sidebar-bg: #171c28;
   --profile-text-color: #b9babe;
   --profile-icon-color: brightness(0) saturate(100%) invert(77%) sepia(15%) saturate(11%) hue-rotate(146deg)
       brightness(95%) contrast(90%);
@@ -3128,7 +3128,7 @@ html.dark {
   align-items: center;
   justify-content: center;
   gap: 14px;
-  height: 100%;
+  min-height: 171px;
   border-radius: 10px;
   border: 1px dashed var(--profile-payment-new-card-border-color);
   transition: 0.1s;
@@ -3165,6 +3165,7 @@ html.dark {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 54px;
   height: 54px;
   border-radius: 8px;
@@ -3193,6 +3194,12 @@ html.dark {
   height: 108px;
   object-fit: contain;
 }
+@media (max-width: 767.98px) {
+  .favourite-item__thumb {
+    width: 110px;
+    height: 78.675px;
+  }
+}
 .favourite-item__title {
   font-size: 1.5rem;
   font-weight: 500;
@@ -3201,8 +3208,14 @@ html.dark {
 .favourite-item__inline {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px 20px;
   margin-top: 10px;
+}
+@media (max-width: 991.98px) {
+  .favourite-item__inline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .favourite-item__price {
   font-size: 2.2rem;
@@ -4915,9 +4928,9 @@ html.dark {
   color: var(--profile-text-color);
 }
 .profile__sidebar {
-  height: 100%;
+  padding-bottom: 30px;
   border-radius: 20px;
-  background: var(--profile-bg);
+  background: var(--profile-sidebar-bg);
   box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
 }
 .profile-user {
@@ -4927,7 +4940,6 @@ html.dark {
   padding: 35px 0 20px;
   background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%), url("../img/profile/cover.png") no-repeat center/cover;
   border-radius: 20px 20px 0px 0px;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
 .profile-user__avatar {
   width: 121px;
@@ -4953,7 +4965,7 @@ html.dark {
   color: #fff;
 }
 .profile-menu {
-  margin: 30px 30px;
+  margin: 30px 30px 0 30px;
 }
 .profile-menu__title {
   font-size: 1.8rem;
@@ -4972,8 +4984,12 @@ html.dark {
   transition: 0.2s;
 }
 .profile-menu__link:hover {
+  color: #1a162e;
   background: #2bd7e3;
   background-image: linear-gradient(73deg, #2bd7e3 10%, #e4d1d1 100%);
+}
+.profile-menu__link:hover .profile-menu__icon {
+  filter: brightness(0) saturate(100%) invert(4%) sepia(44%) saturate(3579%) hue-rotate(239deg) brightness(99%) contrast(90%);
 }
 .profile-menu__icon {
   width: 24px;
