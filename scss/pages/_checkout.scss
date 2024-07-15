@@ -50,6 +50,29 @@
         margin-top: 30px;
     }
 
+    &__back {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.1s;
+
+        &:hover {
+            color: #2bd7e3;
+        }
+
+        &:hover &-icon {
+            filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg)
+                brightness(90%) contrast(98%);
+            translate: -4px;
+        }
+
+        &-icon {
+            width: 30px;
+            filter: var(--checkout-icon-color);
+            transition: translate 0.3s;
+        }
+    }
+
     &__heading {
         font-size: 2.4rem;
         font-weight: 700;

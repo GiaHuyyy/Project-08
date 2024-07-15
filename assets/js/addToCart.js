@@ -1,38 +1,51 @@
 // Kết hợp các NodeList và gắn sự kiện click
 const handChooseElements = document.querySelectorAll(".address-cart__left, .payment-item__delivery");
-handChooseElements.forEach((element) => {
-    element.addEventListener("click", function () {
-        toggleClass(element, ".cart-info__choose", "cart-info__choose--active");
-        toggleClass(element, ".payment-item__cost", "payment-item__cost--active");
+if (handChooseElements.length > 0) {
+    handChooseElements.forEach((element) => {
+        element.addEventListener("click", function () {
+            toggleClass(element, ".cart-info__choose", "cart-info__choose--active");
+            toggleClass(element, ".payment-item__cost", "payment-item__cost--active");
+        });
     });
-});
+}
 
 // Gắn sự kiện click cho phần tử chọn tất cả
 const handChooseAllElementsFavorite = document.querySelector(".cart-info__choose-all");
-let selectAllActive = false;
-handChooseAllElementsFavorite.addEventListener("click", function () {
-    selectAllChecked(handChooseAllElementsFavorite, ".cart-info__choose", "cart-info__choose--active");
-});
+if (handChooseAllElementsFavorite) {
+    let selectAllActive = false;
+    handChooseAllElementsFavorite.addEventListener("click", function () {
+        selectAllActive = !selectAllActive;
+        selectAllChecked(
+            handChooseAllElementsFavorite,
+            ".cart-info__choose",
+            "cart-info__choose--active",
+            selectAllActive
+        );
+    });
+}
 
 const handChooseElementsFavourite = document.querySelectorAll(".cart-info__choose");
-handChooseElementsFavourite.forEach((element) => {
-    element.addEventListener("click", function () {
-        element.classList.toggle("cart-info__choose--active");
+if (handChooseElementsFavourite.length > 0) {
+    handChooseElementsFavourite.forEach((element) => {
+        element.addEventListener("click", function () {
+            element.classList.toggle("cart-info__choose--active");
+        });
     });
-});
+}
 
 function toggleClass(element, selector, activeClass) {
     const chooseElements = document.querySelectorAll(selector);
     chooseElements.forEach((el) => el.classList.remove(activeClass));
     const chooseElement = element.querySelector(selector);
-    chooseElement.classList.add(activeClass);
+    if (chooseElement) {
+        chooseElement.classList.add(activeClass);
+    }
 }
 
-function selectAllChecked(element, selector, activeClass) {
+function selectAllChecked(element, selector, activeClass, isActive) {
     const chooseElements = document.querySelectorAll(selector);
-    selectAllActive = !selectAllActive;
-    element.classList.toggle(activeClass, selectAllActive);
-    chooseElements.forEach((el) => el.classList.toggle(activeClass, selectAllActive));
+    element.classList.toggle(activeClass, isActive);
+    chooseElements.forEach((el) => el.classList.toggle(activeClass, isActive));
 }
 
 // Hàm chooseOption

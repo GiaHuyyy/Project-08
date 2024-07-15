@@ -2681,6 +2681,11 @@ html.dark {
     padding: 0 20px;
   }
 }
+.form__group-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
 
 .message {
   width: 100%;
@@ -4335,6 +4340,24 @@ html.dark {
 }
 .cart-info + .cart-info {
   margin-top: 30px;
+}
+.cart-info__back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.1s;
+}
+.cart-info__back:hover {
+  color: #2bd7e3;
+}
+.cart-info__back:hover .cart-info__back-icon {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(69%) saturate(475%) hue-rotate(131deg) brightness(90%) contrast(98%);
+  translate: -4px;
+}
+.cart-info__back-icon {
+  width: 30px;
+  filter: var(--checkout-icon-color);
+  transition: translate 0.3s;
 }
 .cart-info__heading {
   font-size: 2.4rem;
