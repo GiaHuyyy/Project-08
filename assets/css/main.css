@@ -1758,7 +1758,7 @@ html.dark {
   position: relative;
   flex-shrink: 0;
   width: 100%;
-  padding-top: 34%;
+  padding-top: 30%;
 }
 @media (max-width: 767.98px) {
   .slideshow__item {
@@ -1832,7 +1832,7 @@ html.dark {
   gap: 20px;
   height: 100%;
   margin-top: 20px;
-  padding: 20px 26px 20px 20px;
+  padding: 20px;
   border-radius: 16px;
   background: var(--cate-item-bg);
   transition: 0.3s;
@@ -1856,8 +1856,8 @@ html.dark {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .cate-item__thumb {
-  width: 116px;
-  height: 116px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
   background: var(--cate-item-thumb-bg);
   object-fit: contain;
@@ -2056,7 +2056,7 @@ html.dark {
 .product-card__title {
   margin-top: 16px;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 1px) {
   .product-card__title {
     overflow: hidden;
     display: -webkit-box;
@@ -2305,11 +2305,11 @@ html.dark {
 }
 .form__text-input {
   position: relative;
-  height: 50px;
+  height: 48px;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
-    height: 48px;
+    height: 46px;
   }
 }
 .form__text-input--small {
@@ -3249,22 +3249,12 @@ html.dark {
 
 .top-bar {
   position: relative;
-  padding: 30px 0;
+  padding: 16px 0;
   z-index: 1;
-}
-@media (max-width: 991.98px) {
-  .top-bar {
-    padding: 24px 0;
-  }
 }
 @media (max-width: 767.98px) {
   .top-bar {
     justify-content: space-between;
-  }
-}
-@media (max-width: 575.98px) {
-  .top-bar {
-    padding: 16px 0;
   }
 }
 @media (max-width: 991.98px) {

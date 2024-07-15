@@ -18,19 +18,11 @@
 .top-bar {
     @extend %flexItemsCenter;
     position: relative;
-    padding: 30px 0;
+    padding: 16px 0;
     z-index: 1;
-
-    @include abstracts.screen(lg) {
-        padding: 24px 0;
-    }
 
     @include abstracts.screen(md) {
         justify-content: space-between;
-    }
-
-    @include abstracts.screen(sm) {
-        padding: 16px 0;
     }
 
     &__logo {

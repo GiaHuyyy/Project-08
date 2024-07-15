@@ -212,20 +212,31 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
+// Chuyển theme
 window.addEventListener("template-loaded", () => {
     const switchBtn = document.querySelector("#switch-theme-btn");
     if (switchBtn) {
-        switchBtn.onclick = function () {
-            const isDark = localStorage.dark === "true";
-            document.querySelector("html").classList.toggle("dark", !isDark);
-            localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
-            switchBtn.querySelector("img").src = `./assets/icons/${isDark ? "dark-mode" : "light-mode"}.svg`;
+        const switchBtnSpan = switchBtn.querySelector("span");
+        const switchBtnImg = switchBtn.querySelector("img");
+
+        const updateTheme = (isDark) => {
+            document.querySelector("html").classList.toggle("dark", isDark);
+            localStorage.setItem("dark", isDark);
+            switchBtnSpan.textContent = isDark ? "Light mode" : "Dark mode";
+            switchBtnImg.src = `./assets/icons/${isDark ? "light-mode" : "dark-mode"}.svg`;
         };
+
+        switchBtn.onclick = () => {
+            const isDark = localStorage.dark === "true";
+            updateTheme(!isDark);
+        };
+
+        // Initialize theme based on local storage
         const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+        updateTheme(isDark);
     }
 });
 
+// Set initial theme on page load
 const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);

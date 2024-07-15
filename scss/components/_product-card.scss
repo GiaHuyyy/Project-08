@@ -45,7 +45,7 @@
     &__title {
         margin-top: 16px;
 
-        @include abstracts.screen(md) {
+        @media (min-width: 1px) {
             overflow: hidden;
             display: -webkit-box;
             -webkit-box-orient: vertical;
