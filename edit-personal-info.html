@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add new card | Grocery Mart</title>
+        <title>Edit personal info | Grocery Mart</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -171,7 +171,7 @@
                                                     alt=""
                                                     class="cart-info__back-icon"
                                                 />
-                                                Add credit or debit cardt
+                                                Personal info
                                             </a>
                                         </h2>
 
@@ -180,14 +180,14 @@
                                             <!-- Form row 1 -->
                                             <div class="form__row">
                                                 <div class="form__group">
-                                                    <label for="firstname" class="form__label form__label--medium">
-                                                        First name
+                                                    <label for="fulltname" class="form__label form__label--medium">
+                                                        Full name
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
                                                             type="text"
-                                                            name="firstname"
-                                                            id="firstname"
+                                                            name="fulltname"
+                                                            id="fulltname"
                                                             placeholder="Gia"
                                                             class="form__input"
                                                             autofocus
@@ -195,126 +195,69 @@
                                                             minlength="2"
                                                         />
                                                     </div>
-                                                    <p class="form__error">Please enter your first name</p>
+                                                    <p class="form__error">Please enter your full name</p>
                                                 </div>
 
                                                 <div class="form__group">
-                                                    <label for="lastname" class="form__label form__label--medium">
-                                                        Last Name
+                                                    <label for="email" class="form__label form__label--medium">
+                                                        Email address
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
-                                                            type="text"
-                                                            name="lastname"
-                                                            id="lastname"
-                                                            placeholder="Huy"
+                                                            type="email"
+                                                            name="email"
+                                                            id="email"
+                                                            placeholder="tovugiahuy@example.com"
                                                             class="form__input"
                                                             required
-                                                            minlength="2"
                                                         />
                                                     </div>
-                                                    <p class="form__error">Please enter your last name</p>
+                                                    <p class="form__error">Please enter your email</p>
                                                 </div>
                                             </div>
 
                                             <!-- Form row 2 -->
                                             <div class="form__row">
                                                 <div class="form__group">
-                                                    <label for="cardinfo" class="form__label form__label--medium">
-                                                        Card Number
+                                                    <label for="phonenumber" class="form__label form__label--medium">
+                                                        Phone number
                                                     </label>
                                                     <div class="form__text-input">
                                                         <input
-                                                            type="text"
-                                                            name="cardinfo"
-                                                            id="cardinfo"
-                                                            placeholder="Card Number"
-                                                            class="form__input"
-                                                            required
-                                                            minlength="2"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Please enter your card number</p>
-                                                </div>
-
-                                                <div class="form__group">
-                                                    <label for="expdate" class="form__label form__label--medium">
-                                                        Expiration Date
-                                                    </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="expdate"
-                                                            id="expdate"
-                                                            placeholder="MM/YY"
-                                                            class="form__input"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Please enter your expiration date</p>
-                                                </div>
-                                            </div>
-
-                                            <!-- Form row 3 -->
-                                            <div class="form__row">
-                                                <div class="form__group">
-                                                    <label for="ccv" class="form__label form__label--medium">
-                                                        CVV
-                                                    </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="ccv"
-                                                            id="ccv"
-                                                            placeholder="123"
-                                                            class="form__input"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">Please enter your CVV</p>
-                                                </div>
-
-                                                <div class="form__group">
-                                                    <label for="phone" class="form__label form__label--medium">
-                                                        Phone Number 017
-                                                    </label>
-                                                    <div class="form__text-input">
-                                                        <input
-                                                            type="text"
-                                                            name="phone"
-                                                            id="phone"
+                                                            type="tel"
+                                                            name="phonenumber"
+                                                            id="phonenumber"
                                                             placeholder="+84"
                                                             class="form__input"
                                                             required
+                                                            minlength="10"
                                                         />
                                                     </div>
                                                     <p class="form__error">Please enter your phone number</p>
                                                 </div>
-                                            </div>
 
-                                            <div>
                                                 <div class="form__group">
-                                                    <label for="" class="form__label form__label--medium">
-                                                        Card Preferences
+                                                    <label for="password" class="form__label form__label--medium">
+                                                        Password
                                                     </label>
-                                                    <label class="form__checkbox">
+                                                    <div class="form__text-input">
                                                         <input
-                                                            type="checkbox"
-                                                            name=""
-                                                            id=""
-                                                            class="form__checkbox-input"
-                                                            checked
-                                                            hidden
+                                                            type="password"
+                                                            name="password"
+                                                            id="password"
+                                                            placeholder="Password"
+                                                            class="form__input"
+                                                            required
                                                         />
-                                                        <span class="form__checkbox-label">Set as default card</span>
-                                                    </label>
+                                                    </div>
+                                                    <p class="form__error">Please enter your password</p>
                                                 </div>
                                             </div>
 
                                             <!-- Form submit -->
                                             <div class="form__group-btn">
                                                 <button class="btn btn--text">Cancel</button>
-                                                <button class="btn btn--primary btn--rounded">Save Card</button>
+                                                <button class="btn btn--primary btn--rounded">Save</button>
                                             </div>
                                         </form>
                                     </div>
