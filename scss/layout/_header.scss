@@ -252,6 +252,15 @@
         margin: 0 6px;
     }
 
+    &__user {
+        position: relative;
+
+        &:hover .act-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     &__avatar {
         display: block;
         width: 50px;
@@ -260,6 +269,15 @@
         box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
         object-fit: cover;
         cursor: pointer;
+    }
+
+    &__dropdown {
+        right: -8px !important;
+        width: min(300px, 100vw) !important;
+
+        &-arrow {
+            right: 8px !important;
+        }
     }
 }
 
@@ -296,7 +314,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity, visibility;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 
     &__inner {
         position: relative;
@@ -308,7 +326,7 @@
 
     &__arrow {
         position: absolute;
-        top: -12px;
+        top: -13px;
         right: 74px;
         height: 20.5px;
         object-fit: contain;
@@ -414,5 +432,62 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+    }
+}
+
+.user-menu {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    &__username {
+        margin-top: 4px;
+        font-size: 1.4rem;
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 5px;
+        border-radius: 5px;
+        transition: 0.2s;
+
+        &:hover {
+            color: #1a162e;
+            background: #2bd7e3;
+            background-image: linear-gradient(73deg, #2bd7e3 10%, #e4d1d1 100%);
+        }
+
+        &:hover > .user-menu__icon {
+            filter: brightness(0) saturate(100%) invert(4%) sepia(44%) saturate(3579%) hue-rotate(239deg)
+                brightness(99%) contrast(90%);
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        transition: 0.1s;
+        filter: var(--profile-icon-color);
     }
 }

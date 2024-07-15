@@ -4414,13 +4414,16 @@
 
         <!-- Actions -->
         <div class="top-act">
+            <!-- Action search -->
             <div class="top-act__group d-lg-none top-act__group--single">
                 <button class="top-act__btn">
                     <img src="./assets/icons/search.svg" alt="" class="icon top-act__icon" />
                 </button>
             </div>
 
+            <!-- Action favourite, Action cart -->
             <div class="top-act__group d-md-none">
+                <!-- Action favourite -->
                 <div class="top-act__btn-wrap">
                     <button class="top-act__btn">
                         <img src="./assets/icons/heart.svg" alt="" class="icon top-act__icon" />
@@ -4489,13 +4492,16 @@
 
                             <div class="act-dropdown__separate"></div>
 
-                            <a href="./checkout.html" class="btn btn--rounded btn--primary act-dropdown__btn">Check Out All </a>
+                            <a href="./checkout.html" class="btn btn--rounded btn--primary act-dropdown__btn"
+                                >Check Out All
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="top-act__separate"></div>
 
+                <!-- Action cart -->
                 <div class="top-act__btn-wrap">
                     <button class="top-act__btn">
                         <img src="./assets/icons/buy.svg" alt="" class="icon top-act__icon" />
@@ -4582,14 +4588,79 @@
                                 </div>
                             </div>
 
-                            <a href="./checkout.html" class="btn btn--rounded btn--primary act-dropdown__btn">Check Out All </a>
+                            <a href="./checkout.html" class="btn btn--rounded btn--primary act-dropdown__btn"
+                                >Check Out All
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Action user -->
             <div class="top-act__user">
                 <img src="./assets/img/avatar.jpg" alt="" class="top-act__avatar" />
+
+                <!-- Dropdown -->
+                <div class="act-dropdown top-act__dropdown">
+                    <div class="act-dropdown__inner user-menu">
+                        <!-- Dropdown arrow -->
+                        <img
+                            src="./assets/icons/arrow-up.png"
+                            alt=""
+                            class="act-dropdown__arrow top-act__dropdown-arrow"
+                        />
+
+                        <!-- User menu top -->
+                        <div class="user-menu__top">
+                            <img src="./assets/img/avatar.jpg" alt="" class="user-menu__avatar" />
+                            <div>
+                                <p class="user-menu__name">Gia Huy ✓</p>
+                                <p class="user-menu__username">@gia-huy</p>
+                            </div>
+                        </div>
+
+                        <!-- User menu list -->
+                        <ul class="user-menu__list">
+                            <li>
+                                <a href="./profile.html" class="user-menu__link">
+                                    <img src="./assets/icons/profile.svg" alt="" class="user-menu__icon" />
+                                    Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./favourite.html" class="user-menu__link">
+                                    <img src="./assets/icons/heart.svg" alt="" class="user-menu__icon" />
+                                    Favourite list
+                                </a>
+                            </li>
+
+                            <li class="separate" style="--margin: 20px"></li>
+
+                            <li>
+                                <a href="#!" class="user-menu__link">
+                                    <img src="./assets/icons/dark-mode.svg" alt="" class="user-menu__icon" />
+                                    Dark mode
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#!" class="user-menu__link">
+                                    <img src="./assets/icons/settings.svg" alt="" class="user-menu__icon" />
+                                    Settings
+                                </a>
+                            </li>
+
+                            <li class="separate" style="--margin: 20px"></li>
+
+                            <li>
+                                <a href="./" class="user-menu__link">
+                                    <img src="./assets/icons/logout.svg" alt="" class="user-menu__icon" />
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
